@@ -62,19 +62,19 @@
         "FluenciaBasico.pt": "Básico"
     },
     {
-        "iconecard.pt": "assets/pics/LogoAgroGestor.png",
+        "iconecard.pt": "assets/pics-docs/LogoAgroGestor.png",
         "titulocard.pt": "AgroGestor (Em desenvolvimento)",
         "descricaocard.pt": "Projeto em desenvolvimento para participar do Ânima Hub 2026/2, que consiste em um App de gestão financeira voltada para o agricultor brasileiro, como uma forma de cadastrar e acompanhar as movimentações (entrada e saída de capital) de sua(s) fazenda(s).",
         "tecnologias.pt": "Flutter / Dart, Supabase | Projeto privado (por enquanto)"
     },
     {
-        "iconecard.pt": "assets/pics/previewFPO.png",
+        "iconecard.pt": "assets/pics-docs/previewFPO.png",
         "titulocard.pt": "Gerador FPO",
         "descricaocard.pt": "Programa desenvolvido durante meu estágio na Secretaria de Saúde como uma forma de automatizar / solucionar o processo de digitação da FPO (Ficha de Programação Orçamentária) de cada estabelecimento de saúde do meu município, cuja função é a de criar um arquivo formatado de acordo com o layout de importação para a FPO com cada quantidade feita de cada procedimento em cada estabelecimento.",
         "tecnologias.pt": "Python, TKinter | Uso exclusivo da Secretaria de Saúde (por enquanto)"
     },
     {
-        "iconecard.pt": "assets/pics/PreviewTelefonesEmergencia.png",
+        "iconecard.pt": "assets/pics-docs/PreviewTelefonesEmergencia.png",
         "titulocard.pt": "Telefones de Emergência Brasil",
         "descricaocard.pt": "Projeto pessoal de uma landing page que consiste na centralização de todos os telefones de emergência e utilitários do Brasil em um só lugar, com o objetivo de facilitar o acesso e pesquisa a esses números em situações de emergência ou necessidade.",
         "tecnologias.pt": "HTML, CSS, JavaScript e manipulação de JSON",
@@ -82,21 +82,21 @@
         "link2.pt": "https://github.com/MiguelReisB/telefones-emergencia-brasil"
     },
     {
-        "iconecard.pt": "assets/pics/previewMoodClassifier.png",
+        "iconecard.pt": "assets/pics-docs/previewMoodClassifier.png",
         "titulocard.pt": "MoodClassifier",
         "descricaocard.pt": "Modelo de Machine Learning (LogisticRegression) desenvolvido no Google Colab para o trabalho da faculdade da matéria de Exploração Digital e Fundamentos Tecnológicos, treinado em cima de um dataset com 1,6 milhão de registros cujo objetivo é classificar o sentimento de comentários digitais em Positivo (1) ou Negativo (0).",
         "tecnologias.pt": "Python",
         "link2.pt": "https://github.com/MiguelReisB/MoodClassifier"
     },
     {
-        "iconecard.pt": "assets/pics/previewRelacionadorFIlmes.png",
+        "iconecard.pt": "assets/pics-docs/previewRelacionadorFIlmes.png",
         "titulocard.pt": "Relacionador / Recomendador de Filmes",
         "descricaocard.pt": "Pequeno sistema em Python feito para o trabalho da faculdade da matéria Matemática Computacional Aplicada, que ilustra o funcionamento de um sistema de recomendação de serviços de streaming por meio de Grafos e Matrizes de Adjacência, utilizando Lógica Booleana e facilmente representado por Tabelas-Verdade.",
         "tecnologias.pt": "Python",
         "link2.pt": "https://github.com/MiguelReisB/movie-relator-recommender-system"
     },
     {
-        "iconecard.pt": "assets/pics/PreviewThemeSwitch.gif",
+        "iconecard.pt": "assets/pics-docs/PreviewThemeSwitch.gif",
         "titulocard.pt": "Theme Switch",
         "descricaocard.pt": "Uma amostra da funcionalidade de trocar o tema da página para claro ou escuro, utilizado por exemplo nesta página que você está navegando, que pode ser implementada em outros projetos web.",
         "tecnologias.pt": "HTML, CSS e JavaScript",
@@ -166,19 +166,19 @@
         "FluenciaBasico.en": "Basic"
     },
     {
-        "iconecard.en": "assets/pics/LogoAgroGestor.png",
+        "iconecard.en": "assets/pics-docs/LogoAgroGestor.png",
         "titulocard.en": "AgroGestor (In development)",
         "descricaocard.en": "Project currently in development to participate in the 2026/2 Ânima Hub, that consists of a financial management App aimed to the brazilian farmer, as a form of recording and constantly being up to date of the transactions  (capital inflows and outflows) of his(her) farm(s).",
         "tecnologias.en": "Flutter / Dart, Supabase | Private project (for now)"
     },
     {
-        "iconecard.en": "assets/pics/previewFPO.png",
+        "iconecard.en": "assets/pics-docs/previewFPO.png",
         "titulocard.en": "Gerador FPO",
         "descricaocard.en": "A program I developed during my internship at the Department of Health to automate and streamline the process of manually filling out the FPOs (Budget Planning Forms) for each health facility in my city. The program’s function is to generate a document formatted in accordance with the FPO’s import layout, including the quantities for each procedure at each facility.",
         "tecnologias.en": "Python, Tkinter | Exclusive use at the Department of Health (for now)"
     },
     {
-        "iconecard.en": "assets/pics/PreviewTelefonesEmergencia.png",
+        "iconecard.en": "assets/pics-docs/PreviewTelefonesEmergencia.png",
         "titulocard.en": "Brazil Emergency Numbers",
         "descricaocard.en": "Personal project of a landing page that centralize every emergency and utilitiy phone number of Brazil in one place, whose objective is to facilitate the access and search for them in emergency or necessity situations.",
         "tecnologias.en": "HTML, CSS, JavaScript and JSON manipulation",
@@ -186,21 +186,21 @@
         "link2.en": "https://github.com/MiguelReisB/telefones-emergencia-brasil"
     },
     {
-        "iconecard.en": "assets/pics/previewMoodClassifier.png",
+        "iconecard.en": "assets/pics-docs/previewMoodClassifier.png",
         "titulocard.en": "MoodClassifier",
         "descricaocard.en": "Machine Learning Model (RegressionLogistic) developed in Google Colab for the college assignment in the Digital Exploration and Technological Fundamentals subject, trained on a dataset containing 1.6 million records, whose objective is to classify the sentiment of a digital comment in Positive (1) or Negative (0).",
         "tecnologias.en": "Python",
         "link2.en": "https://github.com/MiguelReisB/MoodClassifier"
     },
     {
-        "iconecard.en": "assets/pics/previewRelacionadorFIlmes.png",
+        "iconecard.en": "assets/pics-docs/previewRelacionadorFIlmes.png",
         "titulocard.en": "Movie Connecter / Recommender",
         "descricaocard.en": "Simple Python system developed for the college assignment in the Applied Computational Mathematics subject, which illustrates a streaming service's movie recommender algorithm using Graphs, Adjacency Matrix and Boolean Logic, easily represented by Truth Tables.",
         "tecnologias.en": "Python",
         "link2.en": "https://github.com/MiguelReisB/movie-relator-recommender-system"
     },
     {
-        "iconecard.en": "assets/pics/PreviewThemeSwitch.gif",
+        "iconecard.en": "assets/pics-docs/PreviewThemeSwitch.gif",
         "titulocard.en": "Theme Switch",
         "descricaocard.en": "A sample of the functionality of changing the page's theme to dark or light, used, for example, in this page you're navigating, that can be implemented in any other web project.",
         "tecnologias.en": "HTML, CSS and JavaScript",
@@ -269,19 +269,19 @@
         "FluenciaBasico.es": "Básico"
     },
     {
-        "iconecard.es": "assets/pics/LogoAgroGestor.png",
+        "iconecard.es": "assets/pics-docs/LogoAgroGestor.png",
         "titulocard.es": "AgroGestor (En desarrollo)",
         "descricaocard.es": "Proyecto actualmente en desarrollo para participar en el 2026/2 Ânima Hub, que consiste en una aplicación de gestión financiera dirigida al agricultor brasileño, como una forma de registrar y estar constantemente al día con las transacciones (entradas y salidas de capital) de su(s) granja(s).",
         "tecnologias.es": "Flutter / Dart, Supabase | Proyecto privado (por ahora)"
     },
     {
-        "iconecard.es": "assets/pics/previewFPO.png",
+        "iconecard.es": "assets/pics-docs/previewFPO.png",
         "titulocard.es": "Gerador FPO",
         "descricaocard.es": "Programa desarrollado durante mis prácticas en la Secretaría de Sanidad con el fin de automatizar y optimizar el proceso de introducción de datos de la FPO (Ficha de Programación Presupuestaria) de cada centro sanitario de mi municipio, cuya función es crear un archivo con el formato adecuado según el diseño de importación de la FPO, en el que se incluyan las cantidades correspondientes a cada procedimiento en cada centro.",
         "tecnologias.es": "Python, TKinter | Uso exclusivo de la Secretaría de Sanidad (por ahora)"
     },
     {
-        "iconecard.es": "assets/pics/PreviewTelefonesEmergencia.png",
+        "iconecard.es": "assets/pics-docs/PreviewTelefonesEmergencia.png",
         "titulocard.es": "Teléfonos de Emergencia Brasil",
         "descricaocard.es": "Proyecto personal de una página de aterrizaje que centraliza todos los números de teléfono de emergencia y utilidad de Brasil en un solo lugar, cuyo objetivo es facilitar el acceso y búsqueda de ellos en situaciones de emergencia o necesidad.",
         "tecnologias.es": "HTML, CSS, JavaScript y manipulación de JSON",
@@ -289,21 +289,21 @@
         "link2.es": "https://github.com/MiguelReisB/telefones-emergencia-brasil"
     },
     {
-        "iconecard.es": "assets/pics/previewMoodClassifier.png",
+        "iconecard.es": "assets/pics-docs/previewMoodClassifier.png",
         "titulocard.es": "MoodClassifier",
         "descricaocard.es": "Modelo de Aprendizaje Automático (Regresión Logística) desarrollado en Google Colab para la tarea universitaria en la materia Exploración Digital y Fundamentos Tecnológicos, entrenado en un conjunto de datos que contiene 1.6 millones de registros, cuyo objetivo es clasificar el sentimiento de un comentario digital como Positivo (1) o Negativo (0).",
         "tecnologias.es": "Python",
         "link2.es": "https://github.com/MiguelReisB/MoodClassifier"
     },
     {
-        "iconecard.es": "assets/pics/previewRelacionadorFIlmes.png",
+        "iconecard.es": "assets/pics-docs/previewRelacionadorFIlmes.png",
         "titulocard.es": "Relacionador / Recomendador de Películas",
         "descricaocard.es": "Sistema en Python desarrollado para la tarea universitaria en la materia Matemáticas Computacionales Aplicadas, que ilustra el algoritmo de recomendación de películas de un servicio de streaming usando Grafos, Matriz de Adyacencia y Lógica Booleana, fácilmente representado por Tablas de Verdad.",
         "tecnologias.es": "Python",
         "link2.es": "https://github.com/MiguelReisB/movie-relator-recommender-system"
     },
     {
-        "iconecard.es": "assets/pics/PreviewThemeSwitch.gif",
+        "iconecard.es": "assets/pics-docs/PreviewThemeSwitch.gif",
         "titulocard.es": "Theme Switch",
         "descricaocard.es": "Muestra de la funcionalidad de cambiar el tema de la página a oscuro o claro, utilizado, por ejemplo, en esta página en la que estás navegando, que puede ser implementado en cualquier otro proyecto web.",
         "tecnologias.es": "HTML, CSS y JavaScript",
