@@ -1,4 +1,4 @@
-/* ===================== FONTES ===================== */
+/*  FONTES  */
 @font-face {
   font-family: 'Boldonse';
   src: url('assets/fonts/Boldonse-Regular.ttf') format('truetype');
@@ -6,7 +6,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Iceberg';
   src: url('assets/fonts/Iceberg-Regular.ttf') format('truetype');
@@ -14,7 +13,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Nova Square';
   src: url('assets/fonts/NovaSquare-Regular.ttf') format('truetype');
@@ -22,20 +20,20 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Tomorrow';
   src: url('assets/fonts/Tomorrow-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-}   
+}
 
+/* Scroll */   
 html {
     scroll-behavior: smooth;
 }
 
-/* ===================== VARIAVEIS ===================== */
+/* VARIAVEIS */
 :root {
     /* cores base (tema claro) */
     --cor-fundo-header-footer: rgba(255, 255, 255, 0.685);
@@ -58,6 +56,7 @@ html {
     --fonte-tech: 'Iceberg', 'Nova Square', sans-serif;
 }
 
+/* Cores padrão tema escuro */
 body.dark {
     --cor-fundo-header-footer: rgba(20, 20, 20, 0.815);
     --cor-fundo-main: linear-gradient(145deg, #242424, #111111);
@@ -72,7 +71,7 @@ body.dark .flag-outline, body.dark .ContatoBotoes img, body.dark .RodapeContatoB
     filter: invert(1);
 }
 
-/* ===================== BASE ===================== */
+/* BASE  */
 body {
     margin: 0;
     padding: 0;
@@ -88,7 +87,7 @@ p {
 }
 a { color: inherit; }
 
-/* ===================== CURSOR CUSTOMIZADO ===================== */
+/* Bolinha do cursor */
 .CursorDot {
     position: fixed;
     top: 0;
@@ -107,7 +106,7 @@ a { color: inherit; }
     .CursorDot { display: none; }
 }
 
-/* ===================== ACESSIBILIDADE E FOCO ===================== */
+/* Acessibilidade */
 :focus-visible {
     outline: 2px solid var(--cor-link);
     outline-offset: 3px;
@@ -135,7 +134,7 @@ textarea:focus-visible,
     }
 }
 
-/* ===================== HEADER ===================== */
+/* Cabeçalho */
 .Header {
     position: sticky;
     top: 0;
@@ -257,7 +256,7 @@ input:checked + .Slider:before {
     transform: translateX(42px) rotate(270deg);
 }
 
-/* ===================== BARRA DE PROGRESSO ===================== */
+/* Barra De Progresso */
 .ScrollProgressWrapper {
     position: absolute;
     bottom: 0;
@@ -273,12 +272,12 @@ input:checked + .Slider:before {
     transition: width 0.1s ease-out;
 }
 
-/* ===================== MAIN ===================== */
+/* Main */
 main {
     background: var(--cor-fundo-main);
 }
 
-/* ===================== HERO ===================== */
+/* Hero */
 .Hero {
     position: relative;
     overflow: hidden;
@@ -359,7 +358,7 @@ main {
     mask-image: radial-gradient(circle at var(--x) var(--y), transparent 0, transparent 40px, black 100px);
 }
 
-/* ===================== TITULOS DE SECAO ===================== */
+/* Titulos das secoes  */
 .TituloSecao {
     font-family: var(--fonte-titulo);
     text-align: center;
@@ -367,7 +366,7 @@ main {
     padding: 20px;
 }
 
-/* ===================== SKILLS ===================== */
+/* Secao skills */
 .ConstelacaoWrapper {
     position: relative;
     width: 100%;
@@ -407,7 +406,7 @@ main {
     .ConstelacaoWrapper { max-width: 100%; }
 }
 
-/* ===================== MARQUEE ===================== */
+/* Barras de rolagem dos certificados */
 .MarqueeRow {
     background: var(--cor-fundo);
     overflow: hidden;
@@ -435,19 +434,41 @@ main {
     to { transform: translateX(0); }
 }
 
-/* ===================== SOBRE ===================== */
+/* Secao sobre */
 .ContainerSecaoSobre {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    gap: 2.5rem; 
+    box-sizing: border-box;
 }
-.ParagrafoSecaoSobre1, .ParagrafoSecaoSobre2, .ParagrafoSecaoProjetos{
-    padding: 20px 10%;
-    line-height: 1.2;
+.ParagrafoSecaoSobre1, 
+.ParagrafoSecaoSobre2 {
+    max-width: 680px;
+    width: fit-content;
+    padding: 1.8rem 2.2rem;
+    background: var(--cor-cards);
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: var(--sombra-card);
+    font-family: var(--fonte-corpo);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+.ParagrafoSecaoSobre1 {
+    align-self: flex-start;
+    text-align: left;
+}
+.ParagrafoSecaoSobre2 {
+    align-self: flex-end;
+    text-align: right;
 }
 
-
-/* ===================== TIMELINE (Trajetória) ===================== */
+/* Secao trajetoria */
 .Trajetoria {
     background: var(--cor-fundo);
     padding: 20px;
@@ -499,7 +520,6 @@ main {
 .TimelineItem:nth-child(odd)::after { right: -9px; }
 .TimelineItem:nth-child(even) { left: 50%; text-align: left; }
 .TimelineItem:nth-child(even)::after { left: -9px; }
-
 .TimelineConteudo {
     background: var(--cor-cards);
     padding: 1.2rem 1.5rem;
@@ -536,7 +556,6 @@ main {
 .TimelineToggle[aria-expanded="true"] .TimelineIcone {
     transform: rotate(45deg);
 }
-
 .TimelineDetalhes {
     display: grid;
     grid-template-rows: 0fr;
@@ -558,7 +577,7 @@ main {
     white-space: pre-line;
 }
 
-/* ===================== CERTIFICADOS ===================== */
+/* Secao certificados */
 .Certificado {
     background: var(--cor-cards);
     border-radius: var(--radius);
@@ -587,7 +606,7 @@ main {
 }
 .MarqueeRow + .MarqueeRow { margin-top: 2rem; }
 
-/* ===================== PROJETOS ===================== */
+/* Secao projetos */
 .Projetos{
     margin-bottom: 60px;
 }
@@ -619,7 +638,6 @@ main {
     gap: 0.7rem;
     transition: transform var(--transition), box-shadow var(--transition);
 }
-
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 24px var(--cor-link);
@@ -641,13 +659,13 @@ main {
 .link1:hover, .link2:hover{
     transform: scale(1.03);
 }
-.h2SecaoProjetos, .h2SecaoSobre{
+.h2SecaoProjetos, .h2SecaoSobre, .h2SecaoCertificados{
     font-size: clamp(1.5rem, 3vw, 2rem);
     text-align: center;
     padding: 10px 8% 0 8%;
 }
 
-/* ===================== CONTATO ===================== */
+/* Secao de contato */
 .ContatoSecao {
     display: flex;
     flex-direction: column;
@@ -706,7 +724,6 @@ main {
     transition: opacity var(--transition);
 }
 .FormContato button:hover { opacity: 0.85; }
-
 .ContatoBotoes {
     display: flex;
     flex-direction: column;
@@ -732,7 +749,7 @@ main {
 .BotaoGithub { background: #333; }
 .BotaoCurriculo {background: #d86d08}
 
-/* ===================== RODAPE ===================== */
+/* Rodape */
 .Rodape {
     background: var(--cor-fundo-header-footer);
     color: var(--cor-texto);
@@ -790,7 +807,7 @@ main {
 }
 .RodapeContatoBotoes .LinksRodape img { width: 48px; height: 48px; transition: all var(--transition); }
 
-/* ===================== BACK TO TOP ===================== */
+/* Voltar-ao-topo */
 #back-to-top {
     display: none;
     position: fixed;
@@ -816,7 +833,7 @@ main {
     box-shadow: 0 0 50px var(--cor-link);
 }
 
-/* ===================== RESPONSIVIDADE ===================== */
+/* Responsividade */
 
 /* Tablets */
 @media (max-width: 1024px) {
@@ -829,7 +846,6 @@ main {
 
 /* Celulares */
 @media (max-width: 768px) {
-
     .Header {
         grid-template-columns: auto 1fr auto;
         grid-template-areas:
@@ -853,7 +869,6 @@ main {
     .ThemeSwitch { width: 64px; height: 32px; }
     .Slider:before { height: 24px; width: 24px; }
     input:checked + .Slider:before { transform: translateX(32px) rotate(270deg); }
-
     .Hero {
         flex-direction: column;
         text-align: center;
@@ -863,10 +878,20 @@ main {
     .HeroTexto { max-width: 100%; align-items: center; }
     .HeroSaudacao, .HeroNome, .HeroCargo, .HeroFrase { text-align: center; }
     .HeroImagem { width: 65%; }
-
-    .ContainerSecaoSobre { flex-direction: column; text-align: center; }
-    .ParagrafoSecaoSobre1, .ParagrafoSecaoSobre2 { width: 80%; padding: 0 8%; }
-
+    .ContainerSecaoSobre {
+        padding: 0 1rem;
+        gap: 1.5rem;
+    }
+    .ParagrafoSecaoSobre1, 
+    .ParagrafoSecaoSobre2 {
+        align-self: center;
+        width: 100%;
+        max-width: 100%;
+        padding: 1.2rem 1.4rem;
+        font-size: 1rem;       
+        line-height: 1.5;
+        text-align: left;
+    }
     .Timeline::before { left: 20px; }
     .TimelineItem {
         width: 100%;
@@ -874,32 +899,26 @@ main {
         text-align: left !important;
         padding-left: 3rem;
     }
-    .TimelineItem::after { left: 11px !important; right: auto !important; }
-
+    .TimelineItem::after { left: 11px !important; right: auto !important; 
     .MarqueeTrack { gap: 80px; padding-inline: 40px; }
     .Certificado { width: 220px; }
     .Certificado img { height: 130px; }
-
     .CardsContainer { padding: 1.5rem 6%; }
     .card img { max-width: 250px; height: auto; object-fit: contain; border-radius: 20px}
-
     .ContatoContainer { flex-direction: column; align-items: center; width: 100%; }
     .ContatoBotoes { width: 100%; }
     .BotaoContato { justify-content: center; }
     .FormContato input,
     .FormContato textarea { font-size: 16px; }
-
     #back-to-top {
         bottom: 24px;
         right: 40px;
         width: 52px;
         height: 52px;
     }
-
     .Rodape { flex-direction: column; text-align: center; align-items: center; }
     .RodapeNav, .RodapeContatoBotoes { align-items: center; gap: 8px;}
     .RodapeContatoBotoes .LinksRodape img{ justify-content: space-around; max-width: 32px;}
-
     .CursorDot { display: none; }
 }
 
@@ -914,4 +933,5 @@ main {
     .TimelineConteudo { padding: 0.8rem; }
     .ItensMenu a { font-size: 0.85rem; }
     .Cabecalho { font-size: clamp(1.1rem, 7vw, 1.5rem); }
+}
 }

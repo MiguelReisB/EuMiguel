@@ -27,6 +27,7 @@
         "Timeline6.pt": "Um monte de projetos da fauldade e pessoais se formando - aprendendo e melhorando sempre que posso...",
         "StrongTrajetoria2.pt": "E não estou nem perto do fim da minha história!",
         "TituloContainerCertificado.pt": "Você confere alguns dos meus certificados logo abaixo:",
+        "h2SecaoCertificados.pt": "Alguns marcos de aprendizado — não definem quem eu sou como profissional, e sim onde estive me desafiando e buscando mais conhecimento.",
         "NomeCertificadoJS1.pt": "JavaScript Essentials 1 da Cisco",
         "LinkCertificado.pt": "Ver certificado",
         "NomeCertificadoHTML.pt": "HTML Essentials da Cisco",
@@ -103,6 +104,8 @@
         "link1.pt": "https://miguelreisb.github.io/ThemeSwitch/",
         "link2.pt": "https://github.com/MiguelReisB/ThemeSwitch"
     },
+
+
     {
         "Titulo.en": "I, Miguel",
         "Cabecalho.en": "Hello, World!",
@@ -131,6 +134,7 @@
         "Timeline6.en": "A lot of university and personal projects popping out - learning and improving every time I can...",
         "StrongTrajetoria2.en": "And it's nowhere near the end of my history!",
         "TituloContainerCertificado.en": "You can find some of my certificates right below:",
+        "h2SecaoCertificados.en": "Some of my learning milestones — Doesn't define me as a professional, but where i've been challenging myself and acquiring more knowledge.",
         "NomeCertificadoJS1.en": "Cisco JavaScript Essentials 1",
         "LinkCertificado.en": " View Certificate",
         "NomeCertificadoHTML.en": "Cisco HTML Essentials",
@@ -207,6 +211,9 @@
         "link1.en": "https://miguelreisb.github.io/ThemeSwitch/",
         "link2.en": "https://github.com/MiguelReisB/ThemeSwitch"
     },
+
+
+    
     {
         "Titulo.es": "Yo, Miguel",
         "Cabecalho.es": "¡Hola, Mundo!",
@@ -234,6 +241,7 @@
         "Timeline6.es": "Aparecen muchos proyectos universitarios y personales - aprendiendo y mejorando cada vez que puedo...",
         "StrongTrajetoria2.es": "¡Y no estoy ni cerca del final de mi historia!",
         "TituloContainerCertificado.es": "Puedes encontrar algunos de mis certificados a continuación:",
+        "h2SecaoCertificados.es": "Algunos de mis hitos de aprendizaje — No me definen como profesional, pero sí donde me he estado desafiando a mí mismo y adquiriendo más conocimientos.",
         "NomeCertificadoJS1.es": "JavaScript Essentials 1 de Cisco",
         "LinkCertificado.es": "Ver certificado",
         "NomeCertificadoHTML.es": "HTML Essentials de Cisco",

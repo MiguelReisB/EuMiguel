@@ -1,3 +1,4 @@
+// Plota os dados de datalanguage.json nas estruturas HTML referentes
 const containerLinguas = document.querySelector('.Linguas');
 let dados = {};
 let rawData = [];

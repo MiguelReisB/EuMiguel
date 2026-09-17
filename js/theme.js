@@ -1,3 +1,4 @@
+// Função para trocar o tema da página
 const themeToggle = document.getElementById('checkbox');
 const body = document.body;
 
@@ -27,6 +28,7 @@ window.onscroll = function () {
   scrollFunction();
 };
 
+// Função do voltar-ao-topo
 function scrollFunction() {
   const btn = document.getElementById("back-to-top");
   if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 200) {

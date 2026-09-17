@@ -1,8 +1,8 @@
-// ===================== CURSOR CUSTOMIZADO =====================
-// Ponto branco com mix-blend-mode: difference no CSS.
-// Basta seguir o mouse; o CSS cuida da inversão de cor
-// conforme o que estiver por baixo (fundo claro ou escuro).
-const cursorDot = document.getElementById('CursorDot');
+// Função do cursor customizado 
+/* Ponto branco com mix-blend-mode: difference no CSS. Apenas segue o mouse e o CSS cuida da inversão de cor
+conforme o que estiver por baixo (fundo claro ou escuro). */
+
+const cursorDot = document.getElementById('CursorDot'); 
 
 if (cursorDot && window.matchMedia('(hover: hover)').matches) {
     let mouseX = 0, mouseY = 0;
@@ -30,7 +30,7 @@ if (cursorDot && window.matchMedia('(hover: hover)').matches) {
 }
 
 
-// ===================== EFEITO HOVER: REVELAR FOTO ROBÔ =====================
+// Função para revelar o Miguel Robô por baixo do Miguel humano :O
 const heroImagem = document.querySelector('.HeroImagem');
 
 if (heroImagem) {
@@ -93,10 +93,9 @@ if (heroImagem) {
 }
 
 
-// ===================== CHUVA DE CARACTERES (estilo Matrix) =====================
-// Cada coluna desce continuamente. A cada frame desenhamos a "cabeça" (mais forte)
-// e um rastro de caracteres anteriores com opacidade decrescente.
-// Perto do mouse, os caracteres são empurrados pra longe do cursor (abre um vão).
+// Cascata de caracteres (naipe Matrix)
+/* Cada coluna desce continuamente. É desenhado a cada frame o topo da coluna (mais forte) e um rastro de caracteres anteriores com opacidade decrescente.
+Perto do mouse, os caracteres são empurrados pra longe do cursor (abre um vão). */
 
 (function () {
     const canvas = document.getElementById('MatrixRain');
@@ -120,26 +119,31 @@ if (heroImagem) {
         return `${(bigint >> 16) & 255}, ${(bigint >> 8) & 255}, ${bigint & 255}`;
     }
 
-    function redimensionar() {
+        function redimensionar() {
         const rect = canvas.parentElement.getBoundingClientRect();
         dpr = window.devicePixelRatio || 1;
 
-        largura = rect.width;
-        altura = rect.height;
-        canvas.width = largura * dpr;
-        canvas.height = altura * dpr;
-        canvas.style.width = largura + 'px';
-        canvas.style.height = altura + 'px';
+        const novaLargura = rect.width;
+        const novaAltura = rect.height;
+
+        canvas.width = novaLargura * dpr;
+        canvas.height = novaAltura * dpr;
+        canvas.style.width = novaLargura + 'px';
+        canvas.style.height = novaAltura + 'px';
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-        // Fonte um pouco maior em telas largas, menor em telas estreitas
-        fontSize = Math.max(30, Math.min(20, largura / 45));
-        colunas = Math.floor(largura / fontSize);
+        // Para não resetar a renderização da cascata toda vez que houver um toque na tela de dispostivos móveis
+        const larguraMudou = Math.abs(novaLargura - (largura || 0)) > 5;
 
-        // drops guarda a linha (em "unidades de fontSize") de cada coluna
-        drops = Array.from({ length: colunas }, () => Math.random() * -50);
+        largura = novaLargura;
+        altura = novaAltura;
+        fontSize = Math.max(20, Math.min(20, largura / 45));
+
+        if (larguraMudou || !colunas) {
+            colunas = Math.floor(largura / fontSize);
+            drops = Array.from({ length: colunas }, () => Math.random() * -50);
+        }
     }
-
     function caractereAleatorio() {
         return CARACTERES[Math.floor(Math.random() * CARACTERES.length)];
     }
@@ -158,7 +162,7 @@ if (heroImagem) {
 
                 let x = baseX;
 
-                // --- Distorção: empurra o caractere pra longe do cursor ---
+                // Distorção: empurra o caractere pra longe do cursor 
                 const dx = x - mouseX;
                 const dy = y - mouseY;
                 const dist = Math.sqrt(dx * dx + dy * dy);
@@ -205,11 +209,10 @@ if (heroImagem) {
 })();
 
 
-// ===================== CONSTELACAO DA STACK =====================
-// Hub central -> 9 vertentes -> ferramentas.
-// Ferramentas que pertencem a mais de uma vertente (ex: JavaScript em
-// Front-end E Linguagens) recebem uma linha diagonal extra até a
-// categoria secundária, sem mudar de posição na órbita.
+// Árvore / Constelação (como você preferir chamar) das minhas skills
+/* Hub central -> vertentes -> ferramentas.
+// Ferramentas que pertencem a mais de uma vertente (ex: JavaScript em Front-end E Linguagens) recebem uma linha diagonal extra até a
+categoria secundária, sem mudar de posição na órbita. */
 
 (function () {
     const canvas = document.getElementById('StackConstelacao');
@@ -218,7 +221,7 @@ if (heroImagem) {
 
     const ctx = canvas.getContext('2d');
 
-    // ---- Vertentes, na ordem em que aparecem na órbita ----
+    // Vertentes, na ordem em que aparecem na órbita
     const CATEGORIAS = [
         { chave: 'Línguas', label:'Línguas / Languages'},
         { chave: 'FrontEnd', label: 'Front-end / Web' },
@@ -232,9 +235,9 @@ if (heroImagem) {
         { chave: 'Office', label: 'Office / Produtividade' },
     ];
 
-    // ---- EDITE AQUI: suas ferramentas ----
+    // Local que eu edito as ferramentas
     // categoria = vertente onde ela fica posicionada (primária)
-    // extras = outras vertentes que também se ligam a ela (gera as diagonais)
+    // extras = outras vertentes que também se ligam a ela (gera as diagonais tracejadas)
     const FERRAMENTAS = [
         {nome: 'Português', fluencia: 'fluente', icone: 'assets/icons/brazil.png', categoria: 'Línguas'},
         {nome: 'English', fluencia: 'avancado', icone: 'assets/icons/usa.png', categoria: 'Línguas'},
@@ -298,7 +301,7 @@ if (heroImagem) {
         return `${(bigint >> 16) & 255}, ${(bigint >> 8) & 255}, ${bigint & 255}`;
     }
 
-    // --- Pré-carrega os ícones uma única vez ---
+    // Carrega os ícones uma única vez
     const cacheIcones = {};
     FERRAMENTAS.forEach((f) => {
         if (!cacheIcones[f.icone]) {
@@ -329,11 +332,11 @@ if (heroImagem) {
         const raioCategoria = 210 * escala;
         const raioFerramenta = 140 * escala;
 
-        // --- Hub central ---
+        // Círculo central
         const hub = { x: cx, y: cy + Math.sin(tempo / 1800) * 3 * escala, raioBase: 32 * escala, tipo: 'hub', nome: 'Minha Stack' };
         nos.push(hub);
 
-        // --- Categorias, uma por vertente, distribuídas em círculo ---
+        // Categorias, uma por vertente, distribuídas em círculo 
         const mapaCategorias = {};
         CATEGORIAS.forEach((cat, i) => {
             const angulo = (i / CATEGORIAS.length) * Math.PI * 2 - Math.PI / 2;
@@ -345,7 +348,7 @@ if (heroImagem) {
             mapaCategorias[cat.chave] = no;
         });
 
-        // --- Ferramentas, agrupadas pela categoria primária ---
+        // Ferramentas, agrupadas pela categoria primária
         const porCategoria = {};
         FERRAMENTAS.forEach((f) => {
             (porCategoria[f.categoria] = porCategoria[f.categoria] || []).push(f);
@@ -368,7 +371,7 @@ if (heroImagem) {
                 };
                 nos.push(noFerramenta);
 
-                // --- Diagonais: liga direto às categorias extras ---
+                // Diagonais: liga direto às categorias extras 
                 (f.extras || []).forEach((chaveExtra) => {
                     const catExtra = mapaCategorias[chaveExtra];
                     if (catExtra) linhasExtras.push({ de: noFerramenta, para: catExtra });
@@ -376,7 +379,7 @@ if (heroImagem) {
             });
         });
 
-        // --- Detecta hover ---
+        // Pra detectar o hover
         noAtivo = null;
         let menorDist = Infinity;
         nos.forEach((no) => {
@@ -387,7 +390,7 @@ if (heroImagem) {
             }
         });
 
-        // --- Linhas da árvore (hub->categoria, categoria->ferramenta) ---
+        // Linhas da árvore (ou constelação) (hub->categoria, categoria->ferramenta)
         nos.forEach((no) => {
             if (!no.pai) return;
             const destacada = noAtivo === no || noAtivo === no.pai;
@@ -399,7 +402,7 @@ if (heroImagem) {
             ctx.stroke();
         });
 
-        // --- Linhas diagonais (ferramenta -> categoria extra) ---
+        // Linhas diagonais (ferramenta -> categoria extra)
         linhasExtras.forEach(({ de, para }) => {
             const destacada = noAtivo === de || noAtivo === para;
             ctx.beginPath();
@@ -412,12 +415,12 @@ if (heroImagem) {
             ctx.setLineDash([]);
         });
 
-        // --- Nós ---
+        // Nós(das ferramentas e categorias)
         nos.forEach((no) => {
             const ativo = noAtivo === no;
             const raio = no.raioBase * (ativo ? 1.25 : 1);
 
-            // --- Legenda fixa (sempre visível, sem depender de hover) ---
+            // Legenda fixa (sempre visível, sem depender de hover)
             if (no.tipo === 'categoria') {
                 ctx.font = `${(no.tipo === 'categoria' ? 17 : 10) * escala}px sans-serif`;
                 ctx.fillStyle = `rgba(${rgb}, 0.9)`;
@@ -457,17 +460,22 @@ if (heroImagem) {
             }
         });
 
-        // --- Tooltip ---
+        // Tooltip (nível que eu possuo em determinada ferramenta)
         if (noAtivo && noAtivo.tipo !== 'hub') {
-            if (noAtivo.tipo === 'categoria') {
-                tooltip.innerHTML = noAtivo.nome;
-            } else {
-                const statusValor = noAtivo.fluencia || noAtivo.nivel; 
-                tooltip.innerHTML = `${noAtivo.nome}<span class="nivel">${textoStatusTraduzido(statusValor)}</span>`;
-            }
-            tooltip.style.left = mouseXTela + 'px';
-            tooltip.style.top = mouseYTela + 'px';
+            tooltip.innerHTML = noAtivo.tipo === 'categoria'
+                ? noAtivo.nome
+                : `${noAtivo.nome}<span class="nivel">${textoStatusTraduzido(noAtivo.fluencia || noAtivo.nivel)}</span>`;
             tooltip.classList.add('ativa');
+
+            // Prende a tooltip dentro da tela, evitando que corte nas bordas em telas pequenas
+            const margem = 12;
+            const larguraTooltip = tooltip.offsetWidth;
+            const xClamp = Math.max(
+                larguraTooltip / 2 + margem,
+                Math.min(window.innerWidth - larguraTooltip / 2 - margem, mouseXTela)
+            );
+            tooltip.style.left = xClamp + 'px';
+            tooltip.style.top = mouseYTela + 'px';
         } else {
             tooltip.classList.remove('ativa');
         }
@@ -495,7 +503,7 @@ if (heroImagem) {
 })();
 
 
-// ===================== BARRA DE PROGRESSO DE SCROLL =====================
+// barra de progresso
 const progressBar = document.getElementById('ScrollProgressBar');
 
 function atualizarProgresso() {
@@ -510,7 +518,7 @@ window.addEventListener('scroll', atualizarProgresso);
 window.addEventListener('resize', atualizarProgresso);
 atualizarProgresso();
 
-// ===================== ACCORDION DA TIMELINE =====================
+// Acordeão dos itens da timeline
 document.querySelectorAll('.TimelineToggle').forEach((btn) => {
     btn.addEventListener('click', () => {
         const aberto = btn.getAttribute('aria-expanded') === 'true';
@@ -521,16 +529,13 @@ document.querySelectorAll('.TimelineToggle').forEach((btn) => {
     });
 });
 
-// ===================== ANO ATUAL NO RODAPE =====================
+// Coloca o ano atual no copyright do rodapé
  const anoAtualEl = document.getElementById('AnoAtual');
 if (anoAtualEl) {
     anoAtualEl.textContent = new Date().getFullYear();
 }
 
-// ===================== GSAP: EFEITOS DE SCROLL =====================
-// Observação: os marquees de Skills e Certificados são 100% CSS (animação contínua
-// via @keyframes). Por isso NÃO recebem fade-in via GSAP aqui — animar "opacity/y"
-// no mesmo elemento que já tem uma animação CSS de transform quebraria o loop.
+// GSAP: Efeitos de scroll
 window.addEventListener('load', () => {
     if (!window.gsap || !window.ScrollTrigger) return;
     gsap.registerPlugin(ScrollTrigger);
@@ -550,7 +555,7 @@ window.addEventListener('load', () => {
         });
     });
 
-    // --- Fade-in genérico: títulos e blocos estáticos de cada seção ---
+    // Fade-in genérico: títulos e blocos estáticos de cada seção
     const alvosFadeIn = [
         '.TituloSecao',
         '.HeroTexto',
@@ -558,7 +563,8 @@ window.addEventListener('load', () => {
         '.ContainerSecaoSobre',
         '.Projetos',
         '.StrongTrajetoria',
-        '.ContatoContainer'
+        '.ContatoContainer',
+        '.RodapeColuna'
     ];
     gsap.utils.toArray(alvosFadeIn.join(', ')).forEach((el) => {
         gsap.from(el, {
@@ -574,7 +580,7 @@ window.addEventListener('load', () => {
         });
     });
 
-    // --- Projetos: fade-in nos cards quando são plotados (delegado, já que os cards são criados via JS) ---
+    // Projetos: fade-in nos cards quando são plotados (delegado, já que os cards são criados via JS)
     const cardsObserver = new MutationObserver(() => {
         gsap.utils.toArray('.card').forEach((card) => {
             if (card.dataset.animado) return;
@@ -598,6 +604,7 @@ window.addEventListener('load', () => {
     }
 });
 
+// Meu número do Zap-Zap
 const NUMERO_WHATSAPP = "5537999343449";
 
 if (NUMERO_WHATSAPP) {
