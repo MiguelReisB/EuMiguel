@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="Titulo" data-translate-key="Titulo"></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="CursorDot" id="CursorDot"></div>
+
+    <header class="Header">
+
+        <div class="ThemeSwitchWrapper">
+            <label class="ThemeSwitch" for="checkbox" title="Alternar tema claro/escuro / Toggle light/dark theme / Cambiar tema claro/oscuro">
+                <input type="checkbox" id="checkbox" aria-label="Alternar tema claro/escuro / Toggle light/dark theme / Cambiar tema claro/oscuro" title="Alternar tema claro/escuro / Toggle light/dark theme / Cambiar tema claro/oscuro" class="Checkbox">
+                <div class="Slider Round"></div>
+            </label>
+        </div>
+
+        <div class="HeaderCenter">
+            <h1 class="Cabecalho" data-translate-key="Cabecalho"></h1>
+            <nav class="Menu" aria-label="Navegação principal / Main navigation / Navegación principal">
+                <ul class="ItensMenu">
+                    <li><a href="#Sobre" data-translate-key="Sobre" title="Sobre mim / About me / Sobre mí" aria-label="Sobre mim / About me / Sobre mí"></a></li>
+                    <li><a href="#Certificados" data-translate-key="CertificadosMenu" title="Certificados / Certificates / Certificados" aria-label="Certificados / Certificates / Certificados"></a></li>
+                    <li><a href="#MeusProjetos" data-translate-key="Projetos" title="Meus Projetos / My Projects / Mis Proyectos" aria-label="Meus Projetos / My Projects / Mis Proyectos"></a></li>
+                    <li><a href="#Contato" data-translate-key="Contato" title="Contato / Contact / Contacto" aria-label="Contato / Contact / Contacto"></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="Linguas" aria-label="Seletor de idioma / Language selector / Selector de idioma">
+            <button data-lang="pt" aria-label="Mudar idioma para Português / Switch language to Portuguese / Cambiar idioma a Portugués" title="Português / Portuguese / Portugués">
+                <img src="assets/icons/brasil.png" alt="Bandeira do Brasil / Flag of Brazil / Bandera de Brasil" class="flag-outline" width="80" height="80">
+                <img src="assets/icons/brazil.png" alt="Bandeira do Brasil / Flag of Brazil / Bandera de Brasil" class="flag-filled" width="80" height="80">
+            </button>
+            <button data-lang="en" aria-label="Mudar idioma para Inglês / Switch language to English / Cambiar idioma a Inglés" title="Inglês / English / Inglés">
+                <img src="assets/icons/eua.png" alt="Bandeira dos EUA / Flag of the USA / Bandera de EE. UU." class="flag-outline" width="80" height="80">
+                <img src="assets/icons/usa.png" alt="Bandeira dos EUA / Flag of the USA / Bandera de EE. UU." class="flag-filled" width="80" height="80">
+            </button>
+            <button data-lang="es" aria-label="Mudar idioma para Espanhol / Switch language to Spanish / Cambiar idioma a Español" title="Espanhol / Spanish / Español">
+                <img src="assets/icons/espanha.png" alt="Bandeira da Espanha / Flag of Spain / Bandera de España" class="flag-outline" width="80" height="80">
+                <img src="assets/icons/spain.png" alt="Bandeira da Espanha / Flag of Spain / Bandera de España" class="flag-filled" width="80" height="80">
+            </button>
+        </div>
+        <div class="ScrollProgressWrapper">
+            <div class="ScrollProgressBar" id="ScrollProgressBar" role="progressbar" aria-label="Progresso de leitura da página / Page reading progress / Progreso de lectura de la página" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+        </div>
+    </header>
+
+
+
+<main>
+
+    <!-- ===================== HERO ===================== -->
+    <section id="Hero" class="Hero">
+        <canvas id="MatrixRain" class="MatrixRain" aria-hidden="true"></canvas>
+        <div class="HeroTexto">
+            <p class="HeroSaudacao" data-translate-key="HeroSaudacao"></p>
+            <h1 class="HeroNome" data-translate-key="HeroNome"></h1>
+            <h2 class="HeroCargo" data-translate-key="HeroCargo"></h2>
+            <p class="HeroFrase" data-translate-key="HeroFrase"></p>
+        </div>
+        <div class="HeroImagem">
+            <img src="assets/pics/fotoBase.png" alt="Foto de Miguel Reis / Photo of Miguel Reis / Foto de Miguel Reis" class="FotoBase" title="Miguel Reis (Versão Humana / Human Version / Versión Humana)">
+            <img src="assets/pics/fotoRobo.png" alt="Versão ciborgue de Miguel Reis / Cyborg version of Miguel Reis / Versión cíborg de Miguel Reis" class="FotoRobo" title="Miguel Reis (Versão Ciborgue / Cyborg Version / Versión Cíborg)">
+        </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="MinhasSkills" class="Skills">
+        <h2 class="TituloSecao" data-translate-key="TituloSkills"></h2>
+    </section>
+
+    <div class="ConstelacaoWrapper">
+        <canvas id="StackConstelacao" role="img" aria-label="Constelação interativa de ferramentas e habilidades / Interactive constellation of tools and skills / Constelación interactiva de herramientas y habilidades" title="Constelação interativa de habilidades / Interactive skills constellation / Constelación interactiva de habilidades"></canvas>
+        <div class="ConstelacaoTooltip" id="ConstelacaoTooltip"></div>
+    </div>
+
+    <!-- ===================== SOBRE ===================== -->
+    <div class="ContainerSecaoSobre" id="Sobre">
+        <p class="ParagrafoSecaoSobre1" data-translate-key="ParagrafoSecaoSobre1"></p>
+    
+    <p class="ParagrafoSecaoSobre2" data-translate-key="ParagrafoSecaoSobre2"></p>
+    </div>
+    <i><h2 class="h2SecaoSobre" data-translate-key="h2SecaoSobre"></h2></i>
+
+    <!-- ===================== TRAJETORIA / TIMELINE ===================== -->
+    <section id="Trajetoria" class="Trajetoria">
+        <h2 class="TituloSecao" data-translate-key="Minhatrajetoria"></h2>
+    
+
+    <strong class="StrongTrajetoria" data-translate-key="StrongTrajetoria1"></strong>
+
+    <div class="Timeline">
+        <div class="TimelineItem">
+            <div class="TimelineConteudo">
+                <p class="TimelineData">2006</p>
+                <p class="TimelineTexto" data-translate-key="Timeline0"></p>
+            </div>
+        </div>
+        <div class="TimelineItem">
+            <div class="TimelineConteudo">
+                <p class="TimelineData">2012</p>
+                <p class="TimelineTexto" data-translate-key="Timeline1"></p>
+            </div>
+        </div>
+        <div class="TimelineItem">
+            <div class="TimelineConteudo">
+                <p class="TimelineData">2019</p>
+                <p class="TimelineTexto" data-translate-key="Timeline2"></p>
+            </div>
+        </div>
+        <div class="TimelineItem">
+            <div class="TimelineConteudo">
+                <p class="TimelineData">2020</p>
+                <p class="TimelineTexto" data-translate-key="Timeline3"></p>
+            </div>
+        </div>
+        <div class="TimelineItem">
+            <div class="TimelineConteudo">
+                <button class="TimelineToggle" aria-expanded="false" aria-label="Expandir ou recolher detalhes de 01/2025 / Expand or collapse details of 01/2025 / Expandir o contraer detalles de 01/2025" title="Expandir ou recolher detalhes / Expand or collapse details / Expandir o contraer detalles">
+                <p class="TimelineData">01/2025</p>
+                <p class="TimelineTexto" data-translate-key="Timeline4"></p>
+                <span class="TimelineIcone" title="Ver mais / See more / Ver más" aria-hidden="true">+</span>
+                </button>
+                <div class="TimelineDetalhes">
+                    <div class="TimelineDetalhesInner">
+                        <p data-translate-key="Timeline4Detalhe"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="TimelineItem">
+            <div class="TimelineConteudo">
+                <button class="TimelineToggle" aria-expanded="false" aria-label="Expandir ou recolher detalhes de 06/2025 / Expand or collapse details of 06/2025 / Expandir o contraer detalles de 06/2025" title="Expandir ou recolher detalhes / Expand or collapse details / Expandir o contraer detalles">
+                <p class="TimelineData">06/2025</p>
+                <p class="TimelineTexto" data-translate-key="Timeline5"></p>
+                <span class="TimelineIcone" title="Ver mais / See more / Ver más" aria-hidden="true">+</span>
+                </button>
+                <div class="TimelineDetalhes">
+                    <div class="TimelineDetalhesInner">
+                        <p data-translate-key="Timeline5Detalhe"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="TimelineItem">
+            <div class="TimelineConteudo">
+                <p class="TimelineData">2026 -</p>
+                <p class="TimelineTexto" data-translate-key="Timeline6"></p>
+            </div>
+        </div>
+    </div>
+
+    <strong class="StrongTrajetoria" data-translate-key="StrongTrajetoria2"></strong>
+    </section>
+
+    <!-- ===================== CERTIFICADOS (marquee duplo) ===================== -->
+    <section class="CertScrollSection" id="Certificados">
+        <h2 class="TituloSecao CertScrollTitulo" data-translate-key="TituloContainerCertificado"></h2>
+
+        <div class="MarqueeRow">
+            <div class="MarqueeTrack MarqueeRight MarqueeCert">
+                <div class="Certificado">
+                    <img src="assets/pics/PreviewCertificadoJS1.png" alt="Certificado Cisco JS 1 / Cisco JS 1 Certificate / Certificado Cisco JS 1">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoJS1"></p>
+                    <a href="assets/pics/CertificadoCiscoJS1.pdf" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" title="Ver certificado em nova aba / View certificate in new tab / Ver certificado en nueva pestaña" aria-label="Ver certificado Cisco JS 1 / View Cisco JS 1 certificate / Ver certificado Cisco JS 1"></a>
+                </div>
+                <div class="Certificado">
+                    <img src="assets/pics/PreviewCertificadoHTML.png" alt="Certificado Cisco HTML / Cisco HTML Certificate / Certificado Cisco HTML">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoHTML"></p>
+                    <a href="assets/pics/CertificadoCiscoHTML.pdf" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" title="Ver certificado em nova aba / View certificate in new tab / Ver certificado en nueva pestaña" aria-label="Ver certificado Cisco HTML / View Cisco HTML certificate / Ver certificado Cisco HTML"></a>
+                </div>
+                <div class="Certificado">
+                    <img src="assets/pics/PreviewCertificadoCSS.png" alt="Certificado Cisco CSS / Cisco CSS Certificate / Certificado Cisco CSS">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoCSS"></p>
+                    <a href="assets/pics/CertificadoCiscoCSS.pdf" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" title="Ver certificado em nova aba / View certificate in new tab / Ver certificado en nueva pestaña" aria-label="Ver certificado Cisco CSS / View Cisco CSS certificate / Ver certificado Cisco CSS"></a>
+                </div>
+                <div class="Certificado">
+                    <img src="assets/pics/JavaOracle.png" alt="Certificado Oracle Java Programming / Oracle Java Programming Certificate / Certificado Oracle Java Programming">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoJava"></p>
+                    <a href="assets/pics/JavaProgramming.pdf" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" title="Ver certificado em nova aba / View certificate in new tab / Ver certificado en nueva pestaña" aria-label="Ver certificado Oracle Java Programming / View Oracle Java Programming certificate / Ver certificado Oracle Java Programming"></a>
+                </div>
+                <div class="Certificado">
+                    <img src="assets/pics/DBOracle.png" alt="Certificado Oracle Database Design / Oracle Database Design Certificate / Certificado Oracle Database Design">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoDatabase"></p>
+                    <a href="assets/pics/DatabaseDesign.pdf" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" title="Ver certificado em nova aba / View certificate in new tab / Ver certificado en nova pestaña" aria-label="Ver certificado Oracle Database Design / View Oracle Database Design certificate / Ver certificado Oracle Database Design"></a>
+                </div>
+            </div>
+            <div class="MarqueeTrack MarqueeRight MarqueeCert" aria-hidden="true">
+                <div class="Certificado">
+                    <img src="assets/pics/PreviewCertificadoJS1.png" alt="" aria-hidden="true">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoJS1"></p>
+                    <a href="assets/pics/CertificadoCiscoJS1.pdf" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" tabindex="-1"></a>
+                </div>
+                <div class="Certificado">
+                    <img src="assets/pics/PreviewCertificadoHTML.png" alt="" aria-hidden="true">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoHTML"></p>
+                    <a href="assets/pics/CertificadoCiscoHTML.pdf" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" tabindex="-1"></a>
+                </div>
+                <div class="Certificado">
+                    <img src="assets/pics/PreviewCertificadoCSS.png" alt="" aria-hidden="true">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoCSS"></p>
+                    <a href="assets/pics/CertificadoCiscoCSS.pdf" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" tabindex="-1"></a>
+                </div>
+                <div class="Certificado">
+                    <img src="assets/pics/JavaOracle.png" alt="" aria-hidden="true">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoJava"></p>
+                    <a href="assets/pics/JavaProgramming.pdf" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" tabindex="-1"></a>
+                </div>
+                <div class="Certificado">
+                    <img src="assets/pics/DBOracle.png" alt="" aria-hidden="true">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoDatabase"></p>
+                    <a href="assets/pics/DatabaseDesign.pdf" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" tabindex="-1"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="MarqueeRow">
+            <div class="MarqueeTrack MarqueeLeft MarqueeCert">
+                <div class="Certificado">
+                    <img src="assets/pics/PreviewCertificadoGoogleCloud.png" alt="Certificado Google Cloud Computing / Google Cloud Computing Certificate / Certificado Google Cloud Computing">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoGoogle"></p>
+                    <a href="https://www.credly.com/badges/383d50a8-8bde-414b-ae63-f813539ad7a2/public_url" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" title="Ver credencial em nova aba / View credential in new tab / Ver credencial en nueva pestaña" aria-label="Ver credencial Google Cloud / View Google Cloud credential / Ver credencial Google Cloud"></a>
+                </div>
+                <div class="Certificado">
+                    <img src="assets/pics/PreviewCertificadoHardware.png" alt="Certificado Cisco Computer Hardware Basics / Cisco Computer Hardware Basics Certificate / Certificado Cisco Computer Hardware Basics">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoHardware"></p>
+                    <a href="assets/pics/CertificadoCiscoHardware.pdf" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" title="Ver certificado em nova aba / View certificate in new tab / Ver certificado en nueva pestaña" aria-label="Ver certificado Cisco Hardware / View Cisco Hardware certificate / Ver certificado Cisco Hardware"></a>
+                </div>
+                <div class="Certificado">
+                    <img src="assets/pics/PreviewCertificadoOS.png" alt="Certificado Cisco Operating Systems Basics / Cisco Operating Systems Basics Certificate / Certificado Cisco Operating Systems Basics">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoOS"></p>
+                    <a href="assets/pics/CertificadoCiscoOS.pdf" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" title="Ver certificado em nova aba / View certificate in new tab / Ver certificado en nueva pestaña" aria-label="Ver certificado Cisco OS / View Cisco OS certificate / Ver certificado Cisco OS"></a>
+                </div>
+                <div class="Certificado">
+                    <img src="assets/pics/CertificadoAlura.png" alt="Certificado Alura Imersão Dev / Alura Dev Immersion Certificate / Certificado Alura Inmersión Dev">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoAlura"></p>
+                    <a href="assets/pics/CertificadoAlura.png" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" title="Ver certificado em nova aba / View certificate in new tab / Ver certificado en nueva pestaña" aria-label="Ver certificado Alura / View Alura certificate / Ver certificado Alura"></a>
+                </div>
+            </div>
+            <div class="MarqueeTrack MarqueeLeft MarqueeCert" aria-hidden="true">
+                <div class="Certificado">
+                    <img src="assets/pics/PreviewCertificadoGoogleCloud.png" alt="" aria-hidden="true">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoGoogle"></p>
+                    <a href="https://www.credly.com/badges/383d50a8-8bde-414b-ae63-f813539ad7a2/public_url" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" tabindex="-1"></a>
+                </div>
+                <div class="Certificado">
+                    <img src="assets/pics/PreviewCertificadoHardware.png" alt="" aria-hidden="true">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoHardware"></p>
+                    <a href="assets/pics/CertificadoCiscoHardware.pdf" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" tabindex="-1"></a>
+                </div>
+                <div class="Certificado">
+                    <img src="assets/pics/PreviewCertificadoOS.png" alt="" aria-hidden="true">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoOS"></p>
+                    <a href="assets/pics/CertificadoCiscoOS.pdf" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" tabindex="-1"></a>
+                </div>
+                <div class="Certificado">
+                    <img src="assets/pics/CertificadoAlura.png" alt="" aria-hidden="true">
+                    <p class="NomeCertificado" data-translate-key="NomeCertificadoAlura"></p>
+                    <a href="assets/pics/CertificadoAlura.png" class="LinkCertificado" data-translate-key="LinkCertificado" target="_blank" rel="noopener noreferrer" tabindex="-1"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PROJETOS ===================== -->
+    <section id="MeusProjetos" class="Projetos">
+        <h2 class="TituloSecao" data-translate-key="TituloProjetos"></h2>
+        <span class="referenciaRobos" data-translate-key="referenciaRobos"></span>
+    </section>
+    <i>
+        <h2 class="h2SecaoProjetos" data-translate-key="h2SecaoProjetos"></h2> 
+    </i>
+    <div class="ParagrafoSecaoProjetos">
+        <p data-translate-key="ParagrafoSecaoProjetos"></p>
+    </div>
+    <section class="CardsContainer" id="CardsContainer" aria-label="Lista de projetos / Projects list / Lista de proyectos">
+    </section>
+
+    <!-- ===================== CONTATO ===================== -->
+    <section id="Contato" class="ContatoSecao">
+        <h2 class="TituloSecao" data-translate-key="TituloContato"></h2>
+        <p class="ParagrafoContato" data-translate-key="ParagrafoContato"></p>
+
+        <div class="ContatoContainer">
+
+            <form class="FormContato" id="FormContato" action="https://formsubmit.co/miguelriboreis@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Novo contato">
+                <input type="hidden" name="_captcha" value="false">
+
+                <label for="nomeContato" data-translate-key="LabelNome"></label>
+                <input type="text" id="nomeContato" name="nome" required autocomplete="name" title="Digite seu nome completo / Enter your full name / Ingrese su nombre completo" aria-label="Nome / Name / Nombre">
+
+                <label for="emailContato" data-translate-key="LabelEmail"></label>
+                <input type="email" id="emailContato" name="email" required autocomplete="email" title="Digite seu e-mail / Enter your email / Ingrese su correo electrónico" aria-label="E-mail / Email / Correo electrónico">
+
+                <label for="mensagemContato" data-translate-key="LabelMensagem"></label>
+                <textarea id="mensagemContato" name="mensagem" rows="5" required title="Digite sua mensagem / Enter your message / Ingrese su mensaje" aria-label="Mensagem / Message / Mensaje"></textarea>
+
+                <button type="submit" data-translate-key="BotaoEnviar" title="Enviar formulário de contato / Send contact form / Enviar formulario de contacto" aria-label="Enviar mensagem / Send message / Enviar mensaje"></button>
+            </form>
+
+            <div class="ContatoBotoes" aria-label="Canais de contato direto / Direct contact channels / Canales de contacto directo">
+                <a href="#" class="BotaoContato BotaoWhatsapp" id="LinkWhatsapp" target="_blank" rel="noopener noreferrer" title="Conversar no WhatsApp / Chat on WhatsApp / Chatear en WhatsApp" aria-label="Conversar no WhatsApp / Chat on WhatsApp / Chatear en WhatsApp">
+                    <img src="assets/icons/whatsapp.svg" alt="WhatsApp" aria-hidden="true">
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://www.linkedin.com/in/miguel-reis-dev/" class="BotaoContato BotaoLinkedin" target="_blank" rel="noopener noreferrer" title="Conectar no LinkedIn / Connect on LinkedIn / Conectar en LinkedIn" aria-label="Conectar no LinkedIn / Connect on LinkedIn / Conectar en LinkedIn">
+                    <img src="assets/icons/linkedin.svg" alt="LinkedIn" aria-hidden="true">
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/MiguelReisB" class="BotaoContato BotaoGithub" target="_blank" rel="noopener noreferrer" title="Acessar perfil no GitHub / Visit GitHub profile / Visitar perfil en GitHub" aria-label="Acessar perfil no GitHub / Visit GitHub profile / Visitar perfil en GitHub">
+                    <img src="assets/icons/github.svg" alt="GitHub" aria-hidden="true">
+                    <span>GitHub</span>
+                </a>
+                <a href="https://drive.google.com/file/d/15K_KRvkGmFReRocLaju_K06Emw0C_azZ/view?usp=sharing" class="BotaoContato BotaoCurriculo" target="_blank" rel="noopener noreferrer" title="Visualizar ou baixar currículo / View or download resume / Ver o descargar currículum" aria-label="Visualizar ou baixar currículo / View or download resume / Ver o descargar currículum">
+                    <img src="assets/icons/curriculo.svg" alt="Currículo" aria-hidden="true">
+                    <span data-translate-key="curriculo"></span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <a href="#" id="back-to-top" title="Voltar ao início da página / Back to top of page / Volver al inicio de la página" aria-label="Voltar ao início da página / Back to top of page / Volver al inicio de la página"><img src="assets/icons/seta.png" alt="Seta para cima / Up arrow / Flecha hacia arriba"></a>
+</main>
+
+    <!-- ===================== RODAPE ===================== -->
+    <footer class="Rodape">
+        <div class="RodapeColuna RodapeCopyright">
+            <p class="RodapeLogo" data-translate-key="Titulo"></p>
+            <p class="RodapeCopy">&copy; <span id="AnoAtual"></span> Miguel R. B. Reis. <span data-translate-key="TextoCopyright"></span></p>
+        </div>
+
+        <div class="RodapeColuna RodapeNav" aria-label="Navegação do rodapé / Footer navigation / Navegación del pie de página">
+            <p class="RodapeTituloColuna" data-translate-key="RodapeNavegacao"></p>
+            <a href="#Hero" data-translate-key="RodapeInicio" title="Ir para o início / Go to home / Ir al inicio" aria-label="Ir para o início / Go to home / Ir al inicio"></a>
+            <a href="#Sobre" data-translate-key="Sobre" title="Ir para Sobre mim / Go to About me / Ir a Sobre mí" aria-label="Ir para Sobre mim / Go to About me / Ir a Sobre mí"></a>
+            <a href="#Trajetoria" data-translate-key="Trajetoria" title="Ir para Minha trajetória / Go to My journey / Ir a Mi trayectoria" aria-label="Ir para Minha trajetória / Go to My journey / Ir a Mi trayectoria"></a>
+            <a href="#Certificados" data-translate-key="CertificadosMenu" title="Ir para Certificados / Go to Certificates / Ir a Certificados" aria-label="Ir para Certificados / Go to Certificates / Ir a Certificados"></a>
+            <a href="#MeusProjetos" data-translate-key="Projetos" title="Ir para Meus Projetos / Go to My Projects / Ir a Mis Proyectos" aria-label="Ir para Meus Projetos / Go to My Projects / Ir a Mis Proyectos"></a>
+            <a href="#Contato" data-translate-key="Contato" title="Ir para Contato / Go to Contact / Ir a Contacto" aria-label="Ir para Contato / Go to Contact / Ir a Contacto"></a>
+        </div>
+
+        <div class="RodapeColuna RodapeContatoBotoes">
+            <p class="RodapeTituloColuna" data-translate-key="RodapeContatoDireto"></p>
+            <ul class="LinksRodape" aria-label="Redes sociais e e-mail / Social networks and email / Redes sociales y correo">
+                <li><a href="#" id="LinkWhatsappRodape" target="_blank" rel="noopener noreferrer" title="Conversar no WhatsApp / Chat on WhatsApp / Chatear en WhatsApp" aria-label="Conversar no WhatsApp / Chat on WhatsApp / Chatear en WhatsApp"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a></li>
+                <li><a href="https://www.linkedin.com/in/miguel-reis-dev/" target="_blank" rel="noopener noreferrer" title="Acessar perfil no LinkedIn / Visit LinkedIn profile / Visitar perfil en LinkedIn" aria-label="Acessar perfil no LinkedIn / Visit LinkedIn profile / Visitar perfil en LinkedIn"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a></li>
+                <li><a href="https://github.com/MiguelReisB" target="_blank" rel="noopener noreferrer" title="Acessar perfil no GitHub / Visit GitHub profile / Visitar perfil en GitHub" aria-label="Acessar perfil no GitHub / Visit GitHub profile / Visitar perfil en GitHub"><img src="assets/icons/github.svg" alt="GitHub"></a></li>
+                <li><a href="mailto:miguelriboreis@gmail.com" target="_blank" rel="noopener noreferrer" title="Enviar e-mail para miguelriboreis@gmail.com / Send email to miguelriboreis@gmail.com / Enviar correo a miguelriboreis@gmail.com" aria-label="Enviar e-mail / Send email / Enviar correo"><img src="assets/icons/email.svg" alt="Email"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="theme.js"></script>
+    <script src="language.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
