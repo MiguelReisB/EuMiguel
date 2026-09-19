@@ -28,9 +28,10 @@
   font-display: swap;
 }
 
-/* Scroll */   
+/* HTML*/   
 html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* VARIAVEIS */
@@ -295,8 +296,8 @@ main {
     z-index: 0;
     opacity: 0.9;
     pointer-events: none; 
-    mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
 }
 .HeroTexto {
     position: relative;
@@ -435,7 +436,7 @@ main {
 }
 
 /* Secao sobre */
-.ContainerSecaoSobre {
+.ContainerSecaoSobre, .ParagrafoSecaoProjetos {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -446,7 +447,7 @@ main {
     box-sizing: border-box;
 }
 .ParagrafoSecaoSobre1, 
-.ParagrafoSecaoSobre2 {
+.ParagrafoSecaoSobre2, .ParagrafoSecaoProjetos {
     max-width: 680px;
     width: fit-content;
     padding: 1.8rem 2.2rem;
@@ -535,8 +536,13 @@ main {
 }
 .TimelineTexto {
     font-size: 1.1rem;
-    margin: 0;
+    margin: 10px;
     text-align: inherit;
+}
+.verMaisTimeline{
+    font-family: var(--fonte-tech);
+    font-size: 1.2rem;
+    color: var(--cor-link);
 }
 .TimelineToggle {
     all: unset;
@@ -546,15 +552,6 @@ main {
     width: 100%;
     box-sizing: border-box;
     display: inline-block;
-}
-.TimelineIcone {
-    font-size: 2rem;
-    color: var(--cor-link);
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-.TimelineToggle[aria-expanded="true"] .TimelineIcone {
-    transform: rotate(45deg);
 }
 .TimelineDetalhes {
     display: grid;
@@ -645,7 +642,9 @@ main {
 .card img { max-width: 450px; height: auto; object-fit: contain; border-radius: 20px}
 .titulo-card { font-size: 1.3rem; margin: 0; }
 .card p { font-size: 1.05rem; }
-.card .tecnologias p { font-size: 0.95rem; opacity: 0.8; }
+.card .tecnologias { display: flex; flex-direction: row; align-items: center;}
+.card h4{ font-family: var(--fonte-tech); font-size: 1.05rem;}
+.card .tecnologias p { font-size: 0.95rem; opacity: 0.8; padding: 5px; }
 .card-links { display: flex; flex-direction: column; gap: 1rem; width: 100%; }
 .card-links a {
     text-decoration: none;
@@ -723,7 +722,7 @@ main {
     cursor: pointer;
     transition: opacity var(--transition);
 }
-.FormContato button:hover { opacity: 0.85; }
+.FormContato button:hover { opacity: 0.65; }
 .ContatoBotoes {
     display: flex;
     flex-direction: column;
@@ -812,14 +811,14 @@ main {
     display: none;
     position: fixed;
     bottom: 40px;
-    right: 40px;
+    right: 50px;
     background-color: var(--cor-link);
     width: 60px;
     height: 60px;
     border-radius: 50%;
     z-index: 998;
-    transition: all var(--transition);
     text-decoration: none;
+    transition: all var(--transition);
 }
 #back-to-top img {
     width: 60%;
@@ -827,10 +826,14 @@ main {
     margin: 20% auto;
     display: block;
     filter: invert(1);
+    transition: all var(--transition);
 }
 #back-to-top:hover {
-    transform: scale(1.05);
     box-shadow: 0 0 50px var(--cor-link);
+}
+#back-to-top img:hover{
+    transform: scale(1.2);
+    transform: translateY(-5px);
 }
 
 /* Responsividade */

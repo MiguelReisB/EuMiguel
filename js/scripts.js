@@ -13,8 +13,8 @@ if (cursorDot && window.matchMedia('(hover: hover)').matches) {
     });
 
     if (window.gsap) {
-        const xTo = gsap.quickTo(cursorDot, "x", { duration: 0.15, ease: "power3" });
-        const yTo = gsap.quickTo(cursorDot, "y", { duration: 0.15, ease: "power3" });
+        const xTo = gsap.quickTo(cursorDot, "x", { duration: 0.25, ease: "power3" });
+        const yTo = gsap.quickTo(cursorDot, "y", { duration: 0.25, ease: "power3" });
         gsap.ticker.add(() => {
             xTo(mouseX);
             yTo(mouseY);
@@ -47,8 +47,8 @@ if (heroImagem) {
     function lerp(a, b, n) { return a + (b - a) * n; }
 
     function loopSuavizacao() {
-        currentX = lerp(currentX, targetX, 0.15);
-        currentY = lerp(currentY, targetY, 0.15);
+        currentX = lerp(currentX, targetX, 0.45);
+        currentY = lerp(currentY, targetY, 0.45);
         heroImagem.style.setProperty('--x', currentX + 'px');
         heroImagem.style.setProperty('--y', currentY + 'px');
         requestAnimationFrame(loopSuavizacao);
@@ -103,9 +103,9 @@ Perto do mouse, os caracteres são empurrados pra longe do cursor (abre um vão)
 
     const ctx = canvas.getContext('2d');
     const CARACTERES = 'アイウエオカキクケコサシスセソ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ<>/{}[]⦓⦔⸹꡴∅∰';
-    const TAMANHO_RASTRO = 40;
+    const TAMANHO_RASTRO = 30;
     const RAIO_MOUSE = 100;
-    const FORCA_EMPURRAO = 90;
+    const FORCA_EMPURRAO = 100;
 
     let largura, altura, fontSize, colunas, drops, dpr;
     let mouseX = -9999, mouseY = -9999;
@@ -137,7 +137,7 @@ Perto do mouse, os caracteres são empurrados pra longe do cursor (abre um vão)
 
         largura = novaLargura;
         altura = novaAltura;
-        fontSize = Math.max(20, Math.min(20, largura / 45));
+        fontSize = Math.max(35, Math.min(20, largura / 45));
 
         if (larguraMudou || !colunas) {
             colunas = Math.floor(largura / fontSize);
@@ -162,7 +162,7 @@ Perto do mouse, os caracteres são empurrados pra longe do cursor (abre um vão)
 
                 let x = baseX;
 
-                // Distorção: empurra o caractere pra longe do cursor 
+                // Empurrão: empurra o caractere pra longe do cursor 
                 const dx = x - mouseX;
                 const dy = y - mouseY;
                 const dist = Math.sqrt(dx * dx + dy * dy);
@@ -211,7 +211,7 @@ Perto do mouse, os caracteres são empurrados pra longe do cursor (abre um vão)
 
 // Árvore / Constelação (como você preferir chamar) das minhas skills
 /* Hub central -> vertentes -> ferramentas.
-// Ferramentas que pertencem a mais de uma vertente (ex: JavaScript em Front-end E Linguagens) recebem uma linha diagonal extra até a
+Ferramentas que pertencem a mais de uma vertente (ex: JavaScript em Front-end E Linguagens) recebem uma linha diagonal extra até a
 categoria secundária, sem mudar de posição na órbita. */
 
 (function () {
@@ -223,16 +223,17 @@ categoria secundária, sem mudar de posição na órbita. */
 
     // Vertentes, na ordem em que aparecem na órbita
     const CATEGORIAS = [
-        { chave: 'Línguas', label:'Línguas / Languages'},
+        { chave: 'Línguas', label:'Idiomas / Languages'},
         { chave: 'FrontEnd', label: 'Front-end / Web' },
         { chave: 'BackEnd', label: 'Back-end' },
-        { chave: 'Mobile', label: 'Mobile' },
-        { chave: 'Database', label: 'Database / Dados' },
         { chave: 'Linguagens', label: 'Linguagens / Programming' },
+        { chave: 'Database', label: 'Database / Dados' },
+        { chave: 'Mobile', label: 'Mobile' },
         { chave: 'DevFerramentas', label: 'Dev / Ferramentas' },
         { chave: 'Testes', label: 'Testes / Tests' },
         { chave: 'Cloud', label: 'Cloud / BaaS' },
         { chave: 'Office', label: 'Office / Produtividade' },
+        { chave: 'SO / OS', label: 'SO/ OS'}
     ];
 
     // Local que eu edito as ferramentas
@@ -252,16 +253,16 @@ categoria secundária, sem mudar de posição na órbita. */
         { nome: 'Java', nivel: 'conhecimento', icone: 'assets/icons/java.svg', categoria: 'BackEnd', extras: ['Linguagens'] },
         { nome: 'Spring Boot', nivel: 'conhecimento', icone: 'assets/icons/springboot.svg', categoria: 'BackEnd' },
 
-        { nome: 'Flutter', nivel: 'dominio', icone: 'assets/icons/flutter.svg', categoria: 'Mobile' },
-        { nome: 'Dart', nivel: 'dominio', icone: 'assets/icons/dart.svg', categoria: 'Mobile', extras: ['Linguagens'] },
+        { nome: 'Python', nivel: 'dominio', icone: 'assets/icons/python.svg', categoria: 'Linguagens' },
+        { nome: 'C++', nivel: 'conhecimento', icone: 'assets/icons/c++.svg', categoria: 'Linguagens', extras: ['BackEnd'] },
 
         { nome: 'SQL', nivel: 'conhecimento', icone: 'assets/icons/sql.svg', categoria: 'Database' },
         { nome: 'MySQL', nivel: 'conhecimento', icone: 'assets/icons/mysql.svg', categoria: 'Database' },
         { nome: 'PostgreSQL', nivel: 'conhecimento', icone: 'assets/icons/postgresql.svg', categoria: 'Database' },
         { nome: 'Supabase', nivel: 'dominio', icone: 'assets/icons/supabase.svg', categoria: 'Cloud', extras: ['Database'] },
 
-        { nome: 'Python', nivel: 'dominio', icone: 'assets/icons/python.svg', categoria: 'Linguagens' },
-        { nome: 'C++', nivel: 'conhecimento', icone: 'assets/icons/c++.svg', categoria: 'Linguagens', extras: ['BackEnd'] },
+        { nome: 'Flutter', nivel: 'dominio', icone: 'assets/icons/flutter.svg', categoria: 'Mobile' },
+        { nome: 'Dart', nivel: 'dominio', icone: 'assets/icons/dart.svg', categoria: 'Mobile', extras: ['Linguagens'] },
 
         { nome: 'Git', nivel: 'dominio', icone: 'assets/icons/git.svg', categoria: 'DevFerramentas' },
         { nome: 'GitHub', nivel: 'dominio', icone: 'assets/icons/github.svg', categoria: 'DevFerramentas' },
@@ -270,7 +271,12 @@ categoria secundária, sem mudar de posição na órbita. */
 
         { nome: 'JUnit', nivel: 'conhecimento', icone: 'assets/icons/junit5.svg', categoria: 'Testes' },
 
-        { nome: 'Office 365', nivel: 'dominio', icone: 'assets/icons/office365.svg', categoria: 'Office' },
+        { nome: 'Office 365', nivel: 'dominio', icone: 'assets/icons/office365.svg', categoria: 'Office', extras: ['SO / OS'] },
+        { nome: 'Libre Office', nivel: 'dominio', icone: 'assets/icons/libreoffice.svg', categoria: 'Office', extras: ['SO / OS'] },
+    
+        { nome: 'Windows', nivel: 'dominio', icone: 'assets/icons/windows.svg', categoria: 'SO / OS' },
+        { nome: 'Linux', nivel: 'dominio', icone: 'assets/icons/linux.svg', categoria: 'SO / OS'}
+    
     ];
     const TEXTO_STATUS = {
         dominio: 'NivelDominio',
@@ -333,7 +339,7 @@ categoria secundária, sem mudar de posição na órbita. */
         const raioFerramenta = 140 * escala;
 
         // Círculo central
-        const hub = { x: cx, y: cy + Math.sin(tempo / 1800) * 3 * escala, raioBase: 32 * escala, tipo: 'hub', nome: 'Minha Stack' };
+        const hub = { x: cx, y: cy + Math.sin(tempo / 1800) * 3 * escala, raioBase: 22 * escala, tipo: 'hub', nome: 'Minha Stack' };
         nos.push(hub);
 
         // Categorias, uma por vertente, distribuídas em círculo 
@@ -468,7 +474,7 @@ categoria secundária, sem mudar de posição na órbita. */
             tooltip.classList.add('ativa');
 
             // Prende a tooltip dentro da tela, evitando que corte nas bordas em telas pequenas
-            const margem = 12;
+            const margem = 40;
             const larguraTooltip = tooltip.offsetWidth;
             const xClamp = Math.max(
                 larguraTooltip / 2 + margem,
@@ -517,17 +523,6 @@ function atualizarProgresso() {
 window.addEventListener('scroll', atualizarProgresso);
 window.addEventListener('resize', atualizarProgresso);
 atualizarProgresso();
-
-// Acordeão dos itens da timeline
-document.querySelectorAll('.TimelineToggle').forEach((btn) => {
-    btn.addEventListener('click', () => {
-        const aberto = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!aberto));
-
-        const detalhes = btn.nextElementSibling;
-        if (detalhes) detalhes.classList.toggle('aberto', !aberto);
-    });
-});
 
 // Coloca o ano atual no copyright do rodapé
  const anoAtualEl = document.getElementById('AnoAtual');

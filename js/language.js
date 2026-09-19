@@ -3,6 +3,13 @@ const containerLinguas = document.querySelector('.Linguas');
 let dados = {};
 let rawData = [];
 
+function inicializar(lang) {
+    aplicarDadosNoHTML(lang);   
+    aplicarVerMais(lang);       
+    iniciarAccordion(lang);      
+    renderizarProjetos(lang);   
+}
+
 function carregarDados() {
    
     fetch('datalanguage.json')
@@ -11,8 +18,7 @@ function carregarDados() {
             rawData = data;
             dados = Object.assign({}, ...data);
             const idiomaSalvo = localStorage.getItem('idioma') || 'pt';
-            aplicarDadosNoHTML(idiomaSalvo);
-            renderizarProjetos(idiomaSalvo);
+            inicializar(idiomaSalvo);
         })
         .catch(error => console.error("Erro ao carregar o arquivo JSON:", error));
 }
@@ -44,6 +50,31 @@ function aplicarDadosNoHTML(lang) {
     });
 }
 
+function aplicarVerMais(lang) {
+    document.querySelectorAll('.TimelineToggle .verMaisTimeline').forEach(span => {
+        const texto = dados[`verMais.${lang}`] || dados[`verMais.pt`];
+        span.textContent = texto;
+    });
+}
+
+function iniciarAccordion(lang) {
+    document.querySelectorAll('.TimelineToggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const aberto = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!aberto));
+            const detalhes = btn.nextElementSibling;
+            if (detalhes) detalhes.classList.toggle('aberto', !aberto);
+            const span = btn.querySelector('.verMaisTimeline');
+            if (span) {
+                const novoTexto = aberto
+                    ? (dados[`verMais.${lang}`] || dados[`verMais.pt`])
+                    : (dados[`verMenos.${lang}`] || dados[`verMenos.pt`]);
+                span.textContent = novoTexto;
+            }
+        });
+    });
+}
+
 function renderizarProjetos(lang) {
     const cardContainer = document.getElementById("CardsContainer");
     if (!cardContainer) return;
@@ -56,7 +87,6 @@ function renderizarProjetos(lang) {
         'es': { ver: 'Ver Proyecto', repo: 'Repositorio en GitHub' }
     };
     const textoBotao = labels[lang] || labels['pt'];
-
     const projetos = rawData.filter(item => item[`titulocard.${lang}`]);
 
     projetos.forEach(dado => {
@@ -66,6 +96,7 @@ function renderizarProjetos(lang) {
         const botaoVer   = link1 ? `<a href="${link1}" target="_blank" class="link1">${textoBotao.ver}</a>` : '';
         const botaoRepo  = link2 ? `<a href="${link2}" target="_blank" class="link2">${textoBotao.repo}</a>` : '';
 
+        
         const linksHTML = (botaoVer || botaoRepo)
             ? `<div class="card-links">${botaoVer}${botaoRepo}</div>`
             : '';   // string vazia → não será inserida
@@ -76,7 +107,7 @@ function renderizarProjetos(lang) {
             <img src="${dado[`iconecard.${lang}`]}" alt="${dado[`titulocard.${lang}`]}">
             <h3 class="titulo-card">${dado[`titulocard.${lang}`]}</h3>
             <p>${dado[`descricaocard.${lang}`]}</p>
-            <div class="tecnologias"><i><p>${dado[`tecnologias.${lang}`]}</p></i></div>
+            <div class="tecnologias"><h4>${dado[`tecnologiasUsadas.${lang}`]}</h4><i><p>${dado[`tecnologias.${lang}`]}</p></i></div>
             ${linksHTML}
         `;
         cardContainer.appendChild(div);

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <!-- Light green background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#21a838" />
+      <stop offset="100%" stop-color="#146d22" />
+    </linearGradient>
+
+    <!-- Corner fold shadow gradient -->
+    <linearGradient id="foldShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Corner fold fill gradient -->
+    <linearGradient id="foldGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.95" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main Document Base -->
+  <path d="M 48,16 
+           L 152,16 
+           L 208,72 
+           L 208,240 
+           L 48,240 
+           Z" 
+        fill="url(#bgGrad)" />
+
+  <!-- Corner Fold Shadow -->
+  <polygon points="152,16 208,72 152,72" fill="url(#foldShadow)" />
+
+  <!-- Corner Fold Piece -->
+  <polygon points="152,16 208,72 152,72" fill="url(#foldGrad)" />
+
+  <!-- Inner Cutout / Symbol Motif -->
+  <path d="M 80,64 
+           L 136,64 
+           L 176,104 
+           L 176,192 
+           L 80,192 
+           Z" 
+        fill="#ffffff" />
+</svg>
