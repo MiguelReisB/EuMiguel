@@ -229,9 +229,9 @@ categoria secundária, sem mudar de posição na órbita. */
         { chave: 'Linguagens', label: 'Linguagens / Programming' },
         { chave: 'Database', label: 'Database / Dados' },
         { chave: 'Mobile', label: 'Mobile' },
-        { chave: 'DevFerramentas', label: 'Dev / Ferramentas' },
-        { chave: 'Testes', label: 'Testes / Tests' },
         { chave: 'Cloud', label: 'Cloud / BaaS' },
+        { chave: 'Testes', label: 'Testes / Tests' },
+        { chave: 'DevFerramentas', label: 'Dev / Ferramentas' },
         { chave: 'Office', label: 'Office / Produtividade' },
         { chave: 'SO / OS', label: 'SO/ OS'}
     ];
@@ -268,6 +268,7 @@ categoria secundária, sem mudar de posição na órbita. */
         { nome: 'GitHub', nivel: 'dominio', icone: 'assets/icons/github.svg', categoria: 'DevFerramentas' },
         { nome: 'VS Code', nivel: 'dominio', icone: 'assets/icons/vscode.svg', categoria: 'DevFerramentas' },
         { nome: 'IntelliJ', nivel: 'dominio', icone: 'assets/icons/intellij.svg', categoria: 'DevFerramentas' },
+        { nome: 'Google Colab', nivel: 'dominio', icone: 'assets/icons/colab.svg', categoria: 'DevFerramentas' },
 
         { nome: 'JUnit', nivel: 'conhecimento', icone: 'assets/icons/junit5.svg', categoria: 'Testes' },
 
