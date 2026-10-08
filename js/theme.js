@@ -27,17 +27,3 @@ if (themeToggle) {
 window.onscroll = function () {
   scrollFunction();
 };
-
-// Função do voltar-ao-topo
-function scrollFunction() {
-  const btn = document.getElementById("back-to-top");
-  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 200) {
-    btn.style.display = "block";
-  } else {
-    btn.style.display = "none";
-  }
-}
-
-document.getElementById("back-to-top").onclick = function () {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};

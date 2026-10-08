@@ -1,3 +1,4 @@
+// Demais funcionalidades ficam aqui...
 // Função do cursor customizado 
 /* Ponto branco com mix-blend-mode: difference no CSS. Apenas segue o mouse e o CSS cuida da inversão de cor
 conforme o que estiver por baixo (fundo claro ou escuro). */
@@ -132,7 +133,7 @@ Perto do mouse, os caracteres são empurrados pra longe do cursor (abre um vão)
         canvas.style.height = novaAltura + 'px';
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-        // Para não resetar a renderização da cascata toda vez que houver um toque na tela de dispostivos móveis
+        // Para não resetar a renderização da cascata toda vez que houver um toque na tela em dispostivos móveis
         const larguraMudou = Math.abs(novaLargura - (largura || 0)) > 5;
 
         largura = novaLargura;
@@ -141,7 +142,7 @@ Perto do mouse, os caracteres são empurrados pra longe do cursor (abre um vão)
 
         if (larguraMudou || !colunas) {
             colunas = Math.floor(largura / fontSize);
-            drops = Array.from({ length: colunas }, () => Math.random() * -50);
+        drops = Array.from({ length: colunas }, () => Math.random() * -50);
         }
     }
     function caractereAleatorio() {
@@ -256,8 +257,8 @@ categoria secundária, sem mudar de posição na órbita. */
         { nome: 'Python', nivel: 'dominio', icone: 'assets/icons/python.svg', categoria: 'Linguagens' },
         { nome: 'C++', nivel: 'conhecimento', icone: 'assets/icons/c++.svg', categoria: 'Linguagens', extras: ['BackEnd'] },
 
-        { nome: 'SQL', nivel: 'conhecimento', icone: 'assets/icons/sql.svg', categoria: 'Database' },
-        { nome: 'MySQL', nivel: 'conhecimento', icone: 'assets/icons/mysql.svg', categoria: 'Database' },
+        { nome: 'SQL', nivel: 'dominio', icone: 'assets/icons/sql.svg', categoria: 'Database' },
+        { nome: 'MySQL', nivel: 'dominio', icone: 'assets/icons/mysql.svg', categoria: 'Database' },
         { nome: 'PostgreSQL', nivel: 'conhecimento', icone: 'assets/icons/postgresql.svg', categoria: 'Database' },
         { nome: 'Supabase', nivel: 'dominio', icone: 'assets/icons/supabase.svg', categoria: 'Cloud', extras: ['Database'] },
 
@@ -273,7 +274,7 @@ categoria secundária, sem mudar de posição na órbita. */
         { nome: 'JUnit', nivel: 'conhecimento', icone: 'assets/icons/junit5.svg', categoria: 'Testes' },
 
         { nome: 'Office 365', nivel: 'dominio', icone: 'assets/icons/office365.svg', categoria: 'Office', extras: ['SO / OS'] },
-        { nome: 'Libre Office', nivel: 'dominio', icone: 'assets/icons/libreoffice.svg', categoria: 'Office', extras: ['SO / OS'] },
+        { nome: 'Libre Office', nivel: 'dominio', icone: 'assets/icons/libreoffice.png', categoria: 'Office', extras: ['SO / OS'] },
     
         { nome: 'Windows', nivel: 'dominio', icone: 'assets/icons/windows.svg', categoria: 'SO / OS' },
         { nome: 'Linux', nivel: 'dominio', icone: 'assets/icons/linux.svg', categoria: 'SO / OS'}
@@ -559,8 +560,7 @@ window.addEventListener('load', () => {
         '.ContainerSecaoSobre',
         '.Projetos',
         '.StrongTrajetoria',
-        '.ContatoContainer',
-        '.RodapeColuna'
+        '.ContatoContainer'
     ];
     gsap.utils.toArray(alvosFadeIn.join(', ')).forEach((el) => {
         gsap.from(el, {
@@ -599,6 +599,53 @@ window.addEventListener('load', () => {
         cardsObserver.observe(cardsContainer, { childList: true });
     }
 });
+// DROPDOWNS (LINGUAS e CURRICULO)
+const dropdownCurriculo = document.querySelector('.DropdownCurriculo');
+if (dropdownCurriculo) {
+    const btn = dropdownCurriculo.querySelector('.DropdownBtn');
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const ativo = dropdownCurriculo.classList.toggle('ativo');
+        btn.setAttribute('aria-expanded', String(ativo));
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!dropdownCurriculo.contains(e.target)) {
+            dropdownCurriculo.classList.remove('ativo');
+            btn.setAttribute('aria-expanded', 'false');
+        }
+    });
+}
+
+const linguasWrapper = document.querySelector('.LinguasWrapper');
+const linguasToggle = document.getElementById('LinguasToggle');
+
+if (linguasWrapper && linguasToggle) {
+    linguasToggle.addEventListener('click', () => {
+        const aberto = linguasWrapper.classList.toggle('aberto');
+        linguasToggle.setAttribute('aria-expanded', String(aberto));
+    });
+    document.addEventListener('click', (e) => {
+        if (!linguasWrapper.contains(e.target)) {
+            linguasWrapper.classList.remove('aberto');
+            linguasToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+}
+
+// Função do voltar-ao-topo
+function scrollFunction() {
+  const btn = document.getElementById("back-to-top");
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 200) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+}
+
+document.getElementById("back-to-top").onclick = function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
 // Meu número do Zap-Zap
 const NUMERO_WHATSAPP = "5537999343449";
