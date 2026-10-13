@@ -302,7 +302,7 @@ categoria secundária, sem mudar de posição na órbita. */
 
     function corLinkRGB() {
         const hex = getComputedStyle(document.documentElement)
-            .getPropertyValue('--cor-link').trim() || '#007bff';
+            .getPropertyValue('--cor-link').trim() || '#3a93f1';
         const h = hex.replace('#', '');
         const full = h.length === 3 ? h.split('').map(c => c + c).join('') : h;
         const bigint = parseInt(full, 16);

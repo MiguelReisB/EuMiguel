@@ -100,7 +100,7 @@ function renderizarProjetos(lang) {
         const botaoRepo  = link2 ? `<a href="${link2}" target="_blank" class="link2">${textoBotao.repo}</a>` : '';
         
         const botaoDetalhes = dado.id 
-            ? `<a href="?projeto=${dado.id}" class="link1 btn-detalhes" onclick="event.preventDefault(); history.pushState({}, '', '?projeto=${dado.id}'); rotearPagina('${lang}');">${textoBotao.detalhes}</a>` 
+            ? `<a href="?projeto=${dado.id}" class="link1 btn-detalhes" aria-label="${textoBotao.detalhes} - ${dado[`titulocard.${lang}`]}" onclick="event.preventDefault(); history.pushState({}, '', '?projeto=${dado.id}'); rotearPagina('${lang}');">${textoBotao.detalhes}</a>` 
             : '';
 
         const linksHTML = (botaoVer || botaoRepo || botaoDetalhes)
@@ -167,6 +167,8 @@ function getTechIcons(techString) {
     }).join('');
 }
 
+let regressandoDeProjeto = false;
+
 function rotearPagina(lang) {
     const params = new URLSearchParams(window.location.search);
     const projetoId = params.get('projeto');
@@ -182,7 +184,11 @@ function rotearPagina(lang) {
         });
         visaoProjeto.style.display = 'block';
         carregarDetalhesProjeto(projetoId, lang);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+        window.scrollTo({ top: 0, behavior: 'auto' });
+        
+        regressandoDeProjeto = true;
+        
     } else {
         filhosMain.forEach(elemento => {
             if (elemento.id !== 'VisaoProjeto') {
@@ -190,6 +196,18 @@ function rotearPagina(lang) {
             }
         });
         if (visaoProjeto) visaoProjeto.style.display = 'none';
+
+        if (regressandoDeProjeto) {
+            const secaoProjetos = document.getElementById('MeusProjetos');
+            if (secaoProjetos) {
+                setTimeout(() => {
+                    secaoProjetos.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 50);
+            }
+            regressandoDeProjeto = false;
+        } else {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+        }
     }
 }
 
@@ -203,7 +221,14 @@ function carregarDetalhesProjeto(id, lang) {
     document.getElementById('DetalheSolucao').textContent = projeto[`detalheSolucao.${lang}`] || '';
     document.getElementById('DetalheResultado').textContent = projeto[`detalheResultado.${lang}`] || '';
     document.getElementById('DetalheTecnologias').textContent = projeto[`tecnologias.${lang}`] || '';
-    document.getElementById('DetalheCliente').textContent = projeto[`detalheCliente.${lang}`] || '';
+    
+    const blocoCliente = document.getElementById('BlocoCliente');
+    const valorCliente = projeto[`detalheCliente.${lang}`] || '';
+    document.getElementById('DetalheCliente').textContent = valorCliente;
+    if (blocoCliente) {
+        blocoCliente.style.display = valorCliente ? '' : 'none';
+    }
+
     document.getElementById('DetalheConceito').textContent = projeto[`detalheConceito.${lang}`] || '';
 
     const containerLinks = document.getElementById('DetalheLinks');

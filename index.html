@@ -16,14 +16,17 @@
     <link rel="canonical" href="https://miguelreis.is-a.dev/">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preload" as="image" href="assets/pics-docs/fotoBase.webp" fetchpriority="high">
+    <link rel="preload" href="assets/fonts/Boldonse-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="icon" href="assets/icons/mrbrLogo.png">
     <title class="Titulo" data-translate-key="Titulo"></title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- CURSOR -->
     <div class="CursorDot" id="CursorDot"></div>
 
+    <!-- HEADER -->
     <header class="Header">
 
         <div class="ThemeSwitchWrapper">
@@ -46,7 +49,7 @@
         </div>
 
     <div class="LinguasWrapper">
-        <button type="button" class="LinguasToggle" id="LinguasToggle" aria-haspopup="true" aria-expanded="false" aria-label="Selecionar idioma / Select language / Seleccionar idioma" title="Idioma / Language / Idioma"><img src="assets/icons/tradutor.svg" class="iconeTradutor"></button>
+        <button type="button" class="LinguasToggle" id="LinguasToggle" aria-haspopup="true" aria-expanded="false" aria-label="Selecionar idioma / Select language / Seleccionar idioma" title="Idioma / Language / Idioma"><img src="assets/icons/tradutor.svg" class="iconeTradutor" alt="Mudar Idioma" aria-hidden="true"></button>
         <div class="Linguas" aria-label="Seletor de idioma / Language selector / Selector de idioma">
             <button data-lang="pt" aria-label="Mudar idioma para Português / Switch language to Portuguese / Cambiar idioma a Portugués" title="Português / Portuguese / Portugués">
                 <img src="assets/icons/brasil.png" alt="Bandeira do Brasil / Flag of Brazil / Bandera de Brasil" class="flag-outline" width="80" height="80">
@@ -69,7 +72,7 @@
     </header>
 
 <main>
-    <!-- ===================== HERO ===================== -->
+    <!-- HERO -->
     <section id="Hero" class="Hero">
         <canvas id="MatrixRain" class="MatrixRain" aria-hidden="true"></canvas>
         <div class="HeroTexto">
@@ -80,11 +83,11 @@
         </div>
         <div class="HeroImagem">
             <img src="assets/pics-docs/fotoBase.webp" alt="Foto de Miguel Reis / Photo of Miguel Reis / Foto de Miguel Reis" class="FotoBase" fetchpriority="high" width="600" height="800">
-            <img src="assets/pics-docs/fotoRobo.webp" alt="Versão ciborgue de Miguel Reis / Cyborg version of Miguel Reis / Versión cíborg de Miguel Reis" class="FotoRobo" width="600" height="800">
+            <img src="assets/pics-docs/fotoRobo.webp" alt="Versão ciborgue de Miguel Reis / Cyborg version of Miguel Reis / Versión cíborg de Miguel Reis" class="FotoRobo" fetchpriority="high" width="600" height="800">
         </div>
     </section>
 
-    <!-- ===================== SKILLS ===================== -->
+    <!-- SKILLS -->
     <section id="MinhasSkills" class="Skills">
         <h2 class="TituloSecao" data-translate-key="TituloSkills"></h2>
     </section>
@@ -94,14 +97,14 @@
         <div class="ConstelacaoTooltip" id="ConstelacaoTooltip"></div>
     </div>
 
-    <!-- ===================== SOBRE ===================== -->
+    <!-- SOBRE -->
     <div class="ContainerSecaoSobre" id="Sobre">
         <p class="ParagrafoSecaoSobre1" data-translate-key="ParagrafoSecaoSobre1"></p>
         <p class="ParagrafoSecaoSobre2" data-translate-key="ParagrafoSecaoSobre2"></p>
     </div>
     <i><h2 class="h2SecaoSobre" data-translate-key="h2SecaoSobre"></h2></i>
 
-    <!-- ===================== TRAJETORIA / TIMELINE ===================== -->
+    <!-- TRAJETORIA / TIMELINE -->
     <section id="Trajetoria" class="Trajetoria">
         <h2 class="TituloSecao" data-translate-key="Minhatrajetoria"></h2>
     
@@ -172,7 +175,7 @@
     <strong class="StrongTrajetoria" data-translate-key="StrongTrajetoria2"></strong>
     </section>
 
-    <!-- ===================== CERTIFICADOS (marquee duplo) ===================== -->
+    <!-- CERTIFICADOS -->
     <section class="CertScrollSection" id="Certificados">
         <h2 class="TituloSecao CertScrollTitulo" data-translate-key="TituloContainerCertificado"></h2>
         <i><h2 class="h2SecaoCertificados" data-translate-key="h2SecaoCertificados"></h2></i>
@@ -281,7 +284,7 @@
         </div>
     </section>
 
-    <!-- ===================== PROJETOS ===================== -->
+    <!-- PROJETOS -->
     <section id="MeusProjetos" class="Projetos">
         <h2 class="TituloSecao" data-translate-key="TituloProjetos"></h2>
         <span class="referenciaRobos" data-translate-key="referenciaRobos"></span>
@@ -296,7 +299,7 @@
     <section class="CardsContainer" id="CardsContainer" aria-label="Lista de projetos / Projects list / Lista de proyectos">
     </section>
 
-    <!-- ===================== CONTATO ===================== -->
+    <!-- CONTATO -->
     <section id="Contato" class="ContatoSecao">
         <h2 class="TituloSecao" data-translate-key="TituloContato"></h2>
         <p class="ParagrafoContato" data-translate-key="ParagrafoContato"></p>
@@ -359,8 +362,10 @@
         </div>
     </section>
 
+    <!-- VOLTAR PRO TOPO -->
     <a href="#" id="back-to-top" title="Voltar ao início da página / Back to top of page / Volver al inicio de la página" aria-label="Voltar ao início da página / Back to top of page / Volver al inicio de la página"><img src="assets/icons/seta.png" alt="Seta para cima / Up arrow / Flecha hacia arriba"></a>
 
+    <!-- DETALHAMENTO DOS PROJETOS -->    
     <section id="VisaoProjeto" class="VisaoProjetoContainer" style="display: none;">
     <div class="voltar" title="Voltar / Go back / Volver">
         <img src="assets/icons/voltar.svg" class="iconeVoltar" alt="Voltar" height="20px" width="20px">
@@ -384,6 +389,8 @@
         <div class="BlocoDetalhe">
             <h3 data-translate-key="tecnologiasUsadas"></h3>
             <p id="DetalheTecnologias" data-translate-key="tecnologias"></p>
+        </div>
+        <div class="BlocoDetalhe" id="BlocoCliente">
             <h3 data-translate-key="cliente"></h3>
             <p id="DetalheCliente" data-translate-key="clienteProjeto"></p>
         </div>
@@ -396,7 +403,7 @@
 </section>
 </main>
 
-    <!-- ===================== RODAPE ===================== -->
+    <!-- RODAPE -->
     <footer class="Rodape">
         <div class="RodapeColuna RodapeCopyright">
             <p class="RodapeLogo" data-translate-key="Titulo"></p>
@@ -423,11 +430,12 @@
             </ul>
         </div>
     </footer>
+    
     <!-- links dos Scripts e GSAP-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/language.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/language.js" defer></script>
+    <script src="js/scripts.js" defer></script>
 </body>
 </html>
