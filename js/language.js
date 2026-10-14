@@ -96,8 +96,9 @@ function renderizarProjetos(lang) {
         const link1 = dado[`link1.${lang}`] ?? null;
         const link2 = dado[`link2.${lang}`] ?? null;
 
-        const botaoVer   = link1 ? `<a href="${link1}" target="_blank" class="link1">${textoBotao.ver}</a>` : '';
-        const botaoRepo  = link2 ? `<a href="${link2}" target="_blank" class="link2">${textoBotao.repo}</a>` : '';
+        const tituloProjeto = dado[`titulocard.${lang}`];
+        const botaoVer  = link1 ? `<a href="${link1}" target="_blank" class="link1" aria-label="${textoBotao.ver}: ${tituloProjeto}">${textoBotao.ver}</a>` : '';
+        const botaoRepo = link2 ? `<a href="${link2}" target="_blank" class="link2" aria-label="${textoBotao.repo}: ${tituloProjeto}">${textoBotao.repo}</a>` : '';
         
         const botaoDetalhes = dado.id 
             ? `<a href="?projeto=${dado.id}" class="link1 btn-detalhes" aria-label="${textoBotao.detalhes} - ${dado[`titulocard.${lang}`]}" onclick="event.preventDefault(); history.pushState({}, '', '?projeto=${dado.id}'); rotearPagina('${lang}');">${textoBotao.detalhes}</a>` 

@@ -1,6 +1,7 @@
 // Demais funcionalidades ficam aqui...
+
 // Função do cursor customizado 
-/* Ponto branco com mix-blend-mode: difference no CSS. Apenas segue o mouse e o CSS cuida da inversão de cor
+/* Ponto branco com mix-blend-mode: difference no CSS. Apenas segue o mouse e o CSS inverte a cor
 conforme o que estiver por baixo (fundo claro ou escuro). */
 
 const cursorDot = document.getElementById('CursorDot'); 
@@ -31,7 +32,7 @@ if (cursorDot && window.matchMedia('(hover: hover)').matches) {
 }
 
 
-// Função para revelar o Miguel Robô por baixo do Miguel humano :O
+// Função para revelar o Miguel robô por baixo do Miguel humano :O
 const heroImagem = document.querySelector('.HeroImagem');
 
 if (heroImagem) {
@@ -270,6 +271,7 @@ categoria secundária, sem mudar de posição na órbita. */
         { nome: 'VS Code', nivel: 'dominio', icone: 'assets/icons/vscode.svg', categoria: 'DevFerramentas' },
         { nome: 'IntelliJ', nivel: 'dominio', icone: 'assets/icons/intellij.svg', categoria: 'DevFerramentas' },
         { nome: 'Google Colab', nivel: 'dominio', icone: 'assets/icons/colab.svg', categoria: 'DevFerramentas' },
+        { nome: 'Figma', nivel: 'conhecimento', icone: 'assets/icons/figma.svg', categoria: 'DevFerramentas'},
 
         { nome: 'JUnit', nivel: 'conhecimento', icone: 'assets/icons/junit5.svg', categoria: 'Testes' },
 
@@ -374,7 +376,7 @@ categoria secundária, sem mudar de posição na órbita. */
                 const fy = catNode.y + Math.sin(anguloBase) * (raioFerramenta + balanco);
 
                 const noFerramenta = {
-                    x: fx, y: fy, raioBase: 10 * escala, tipo: 'ferramenta',
+                    x: fx, y: fy, raioBase: 8.5 * escala, tipo: 'ferramenta',
                     nome: f.nome, nivel: f.nivel, fluencia: f.fluencia, icone: f.icone, pai: catNode
                 };
                 nos.push(noFerramenta);
@@ -533,72 +535,39 @@ if (anoAtualEl) {
 }
 
 // GSAP: Efeitos de scroll
-window.addEventListener('load', () => {
-    if (!window.gsap || !window.ScrollTrigger) return;
-    gsap.registerPlugin(ScrollTrigger);
-
-    // --- Timeline: revela cada marco conforme entra na tela ---
-    gsap.utils.toArray('.TimelineItem').forEach((item) => {
-        gsap.from(item, {
-            opacity: 0,
-            y: 100,
-            duration: 0.9,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: item,
-                start: "top 85%",
-                toggleActions: "play none none reverse"
-            }
-        });
+const observadorRevelacao = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add('is-visible');
+            observadorRevelacao.unobserve(entrada.target); // Anima só uma vez e para de consumir CPU
+        }
     });
+}, { threshold: 0.15 });
 
-    // Fade-in genérico: títulos e blocos estáticos de cada seção
-    const alvosFadeIn = [
-        '.TituloSecao',
-        '.HeroTexto',
-        '.HeroImagem',
-        '.ContainerSecaoSobre',
-        '.Projetos',
-        '.StrongTrajetoria',
-        '.ContatoContainer'
-    ];
-    gsap.utils.toArray(alvosFadeIn.join(', ')).forEach((el) => {
-        gsap.from(el, {
-            opacity: 0,
-            y: 50,
-            duration: 0.9,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: el,
-                start: "top 88%",
-                toggleActions: "play none none reverse"
-            }
-        });
-    });
+// Seleciona e observa os elementos estáticos do HTML
+document.querySelectorAll(
+    '.TimelineItem, .TituloSecao, .HeroTexto, .HeroImagem, .ContainerSecaoSobre, .Projetos, .StrongTrajetoria, .ContatoContainer'
+).forEach((el) => {
+    el.classList.add('reveal');
+    observadorRevelacao.observe(el);
+});
 
-    // Projetos: fade-in nos cards quando são plotados (delegado, já que os cards são criados via JS)
-    const cardsObserver = new MutationObserver(() => {
-        gsap.utils.toArray('.card').forEach((card) => {
-            if (card.dataset.animado) return;
-            card.dataset.animado = "true";
-            gsap.from(card, {
-                opacity: 0,
-                y: 30,
-                duration: 0.6,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 90%",
-                    toggleActions: "play none none reverse"
+// Observa os cards de projetos criados dinamicamente pelo language.js
+const cardsContainerEl = document.getElementById('CardsContainer');
+if (cardsContainerEl) {
+    const observadorCards = new MutationObserver((mutacoes) => {
+        mutacoes.forEach((m) => {
+            m.addedNodes.forEach((node) => {
+                if (node.nodeType === 1 && node.classList.contains('card')) {
+                    node.classList.add('reveal');
+                    observadorRevelacao.observe(node);
                 }
             });
         });
     });
-    const cardsContainer = document.getElementById('CardsContainer');
-    if (cardsContainer) {
-        cardsObserver.observe(cardsContainer, { childList: true });
-    }
-});
+    observadorCards.observe(cardsContainerEl, { childList: true });
+}
+
 // DROPDOWNS (LINGUAS e CURRICULO)
 const dropdownCurriculo = document.querySelector('.DropdownCurriculo');
 if (dropdownCurriculo) {

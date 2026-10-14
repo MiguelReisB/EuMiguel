@@ -1,28 +1,28 @@
 /*  FONTES  */
 @font-face {
   font-family: 'Boldonse';
-  src: url('assets/fonts/Boldonse-Regular.woff') format('woff');
+  src: url('fonts/Boldonse-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Iceberg';
-  src: url('assets/fonts/Iceberg-Regular.woff') format('woff');
+  src: url('fonts/Iceberg-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Nova Square';
-  src: url('assets/fonts/NovaSquare-Regular.woff') format('woff');
+  src: url('fonts/NovaSquare-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Tomorrow';
-  src: url('assets/fonts/Tomorrow-Regular.woff') format('woff');
+  src: url('fonts/Tomorrow-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -43,7 +43,7 @@ html {
     --cor-fundo-main: linear-gradient(145deg, #e4e0e0, #f7f1f1);
     --cor-fundo: #dbdbdb;
     --cor-texto: #1a1a1a;
-    --cor-link: #376bce;
+    --cor-link: #0797bb;
     --cor-cards: #ffffff;
     --cor-sombra: #00000033;
     --cor-linha-timeline: #0184a5;
@@ -313,6 +313,17 @@ main {
     background: var(--cor-fundo-main);
     padding-top: var(--header-height);
 }
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform; 
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /* Hero */
 .Hero {
@@ -496,7 +507,7 @@ main {
     border-radius: var(--radius);
     box-shadow: var(--sombra-card);
     font-family: var(--fonte-corpo);
-    font-size: 1rem;
+    font-size: 1.4rem;
     line-height: 1.6;
     transition: transform var(--transition), box-shadow var(--transition);
 }
@@ -676,7 +687,6 @@ main {
     transition: transform var(--transition), box-shadow var(--transition);
 }
 .card:hover {
-    transform: translateY(-8px);
     box-shadow: 0 10px 24px var(--cor-link);
 }
 .card .preview { max-width: 450px; height: auto; object-fit: contain; border-radius: 20px}

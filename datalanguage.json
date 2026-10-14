@@ -46,7 +46,7 @@
         "ParagrafoSecaoProjetos1.pt": "Aqui se encontram projetos e aplicações que desenvolvi para praticar, experimentar novas ideias e ampliar minha visibilidade na área.",
         "ParagrafoSecaoProjetos2.pt": "Cada projeto, por mais bobo ou pequeno que seja, é um registro da minha evolução e do compromisso constante com o crescimento profissional.",
         "TituloContato.pt": "Vamos conversar:",
-        "ParagrafoContato.pt": "Preencha o formulário abaixo ou me chame diretamente pelos canais ao lado. Respondo o mais rápido que puder!",
+        "ParagrafoContato.pt": "Preencha o formulário abaixo ou me chame diretamente pelos canais a seguir. Respondo o mais rápido que puder!",
         "LabelNome.pt": "Seu Nome",
         "LabelEmail.pt": "Seu Endereço de -mail",
         "LabelMensagem.pt": "Sua Mensagem",
@@ -72,8 +72,8 @@
     },
     {
         "id": "agrogestor",
-        "iconecard.pt": "assets/pics-docs/LogoAgroGestor.png",
-        "titulocard.pt": "AgroGestor (Em desenvolvimento)",
+        "iconecard.pt": "assets/pics-docs/LogoAgroGestor.webp",
+        "titulocard.pt": "AgroGestor | Em desenvolvimento",
         "descricaocard.pt": "Projeto em desenvolvimento para participar do Ânima Hub 2026/2, que consiste em um App de gestão financeira voltada para o agricultor brasileiro, como uma forma de cadastrar e acompanhar as movimentações (entrada e saída de capital) de sua(s) fazenda(s).",
         "desafio.pt": "Desafio",
         "detalheDesafio.pt": "Pequenos produtores rurais podem utilizar planilhas, anotações ou diferentes ferramentas para acompanhar informações como fazendas, safras, entradas, saídas e resultados financeiros.\n\n O desafio foi transformar essas necessidades em uma aplicação simples e organizada, capaz de centralizar essas informações e permitir que o produtor tenha uma visão mais clara da situação de suas propriedades e safras.\n\nAlém do desenvolvimento das funcionalidades, o projeto também envolveu desafios técnicos como autenticação de usuários, controle de acesso aos dados, relacionamento entre entidades e construção de uma arquitetura que pudesse evoluir junto com o MVP.",
@@ -84,14 +84,13 @@
         "tecnologiasUsadas.pt": "Tecnologias: ",
         "tecnologias.pt": "Flutter, Dart, Supabase, Git, GitHub ",
         "conceito.pt": "Conceitos abordados",
-        "detalheConceito.pt": "CRUD • Banco de Dados Relacional • Autenticação e Autorização • Row Level Security (RLS) • Backend as a Service (BaaS) • Desenvolvimento Cross-Platform • Modelagem de dados • Arquitetura em camadas",
-        "textoTecnologia.pt": "| Projeto privado (por enquanto)"
+        "detalheConceito.pt": "CRUD • Banco de Dados Relacional • Autenticação e Autorização • Row Level Security (RLS) • Backend as a Service (BaaS) • Desenvolvimento Cross-Platform • Modelagem de dados • Arquitetura em camadas"
     },
     {
         "id": "geradorfpo",
         "iconecard.pt": "assets/pics-docs/previewFPO.png",
         "previewProjeto.pt": "assets/pics-docs/previewGeradorFPO.gif",
-        "titulocard.pt": "Gerador FPO",
+        "titulocard.pt": "Gerador FPO | Uso exclusivo da Secretaria de Saúde",
         "descricaocard.pt": "Programa desenvolvido durante meu estágio na Secretaria de Saúde como uma forma de automatizar / solucionar o processo de digitação da FPO (Ficha de Programação Orçamentária) de cada estabelecimento de saúde do meu município, cuja função é a de criar um arquivo formatado de acordo com o layout de importação para a FPO com cada quantidade feita de cada procedimento em cada estabelecimento.",
         "desafio.pt": "Desafio observado",
         "detalheDesafio.pt": " Durante meu estágio na Secretaria Municipal de Saúde, identifiquei que a elaboração da FPO exigia um processo manual e repetitivo: analisar relatórios de produção do BPA, importar os relatórios de cada estabelecimento individualmente para o Excel, formatar como os dados seriam importados (tabulação e delimitação), excluir colunas desnecessárias, fazer tabelas dinâmicas para somar as quantidades de cada procedimento e posteriormente digitá-las manualmente no sistema FPO.\n\n O processo levava aproximadamente 5 horas por competência, além de estar sujeito a erros de digitação.",
@@ -102,8 +101,7 @@
         "tecnologiasUsadas.pt": "Tecnologias: ",
         "tecnologias.pt": "Python, TKinter",
         "conceito.pt": "Conceitos abordados",
-        "detalheConceito.pt": "Expressões Regulares · Processamento de arquivos TXT · Estruturas de dados · Validação de dados · Automação de processos · Engenharia reversa de formatos",
-        "textoTecnologia.pt": "| Uso exclusivo da Secretaria de Saúde"
+        "detalheConceito.pt": "Expressões Regulares · Processamento de arquivos TXT · Estruturas de dados · Validação de dados · Automação de processos · Engenharia reversa de formatos"
     },
     {
         "id": "telefonesemergenciabrasil",
@@ -161,7 +159,7 @@
     },
     {
         "id": "themeswitch",
-        "iconecard.pt": "assets/pics-docs/previewThemeSwitch.gif",
+        "iconecard.pt": "assets/pics-docs/previewThemeSwitch.webp",
         "titulocard.pt": "ThemeSwitch",
         "descricaocard.pt": "Uma amostra da funcionalidade de trocar o tema da página para claro ou escuro, utilizado por exemplo nesta página que você está navegando, que pode ser implementada em outros projetos web.",
         "desafio.pt": "Desafio observado",
@@ -224,7 +222,7 @@
         "ParagrafoSecaoProjetos1.en": "Here you find projects and applications that I've developed to practice, experiment with new ideas, and expand my visibility in the field.",
         "ParagrafoSecaoProjetos2.en": "Each project, no matter how silly or small it may be, it is a record of my evolution and constant commitment to professional growth.",
         "TituloContato.en": "Let's talk:",
-        "ParagrafoContato.en": "Fill out the form below or reach me directly through the channels on the side. I'll reply as soon as I can!",
+        "ParagrafoContato.en": "Fill out the form below or reach me directly through the following channels. I'll reply as soon as I can!",
         "LabelNome.en": "Your Name",
         "LabelEmail.en": "Your Email Address",
         "LabelMensagem.en": "Your Message",
@@ -250,8 +248,8 @@
     },
     {
         "id": "agrogestor",
-        "iconecard.en": "assets/pics-docs/LogoAgroGestor.png",
-        "titulocard.en": "AgroGestor (In development)",
+        "iconecard.en": "assets/pics-docs/LogoAgroGestor.webp",
+        "titulocard.en": "AgroGestor | In development",
         "descricaocard.en": "Project currently in development to participate in the 2026/2 Ânima Hub, that consists of a financial management App aimed to the brazilian farmer, as a form of recording and constantly being up to date of the transactions (capital inflows and outflows) of his(her) farm(s).",
         "desafio.en": "Challenge",
         "detalheDesafio.en": "Small rural producers may use spreadsheets, notes, or different tools to track information such as farms, harvests, inflows, outflows, and financial results.\n\nThe challenge was to transform these needs into a simple and organized application, capable of centralizing this information and allowing the producer to have a clearer view of the situation of their properties and harvests.\n\nBesides the development of functionalities, the project also involved technical challenges such as user authentication, data access control, entity relationships, and building an architecture that could evolve alongside the MVP.",
@@ -262,14 +260,13 @@
         "tecnologiasUsadas.en": "Technologies: ",
         "tecnologias.en": "Flutter, Dart, Supabase, Git, GitHub ",
         "conceito.en": "Concepts covered",
-        "detalheConceito.en": "CRUD • Relational Database • Authentication and Authorization • Row Level Security (RLS) • Backend as a Service (BaaS) • Cross-Platform Development • Data Modeling • Layered Architecture",
-        "textoTecnologia.en": "| Private project (for now)"
+        "detalheConceito.en": "CRUD • Relational Database • Authentication and Authorization • Row Level Security (RLS) • Backend as a Service (BaaS) • Cross-Platform Development • Data Modeling • Layered Architecture"
     },
     {
         "id": "geradorfpo",
         "iconecard.en": "assets/pics-docs/previewFPO.png",
         "previewProjeto.en": "assets/pics-docs/previewGeradorFPO.gif",
-        "titulocard.en": "Gerador FPO",
+        "titulocard.en": "Gerador FPO | Exclusive use of the Department of Health",
         "descricaocard.en": "A program I developed during my internship at the Department of Health to automate and streamline the process of manually filling out the FPOs (Budget Planning Forms) for each health facility in my city. The program’s function is to generate a document formatted in accordance with the FPO’s import layout, including the quantities for each procedure at each facility.",
         "desafio.en": "Observed challenge",
         "detalheDesafio.en": "During my internship at the Municipal Health Department, I identified that the preparation of the FPO required a manual and repetitive process: analyzing BPA production reports, importing each facility's reports individually into Excel, formatting how the data would be imported (tabulation and delimitation), deleting unnecessary columns, creating pivot tables to sum the quantities of each procedure, and subsequently typing them manually into the FPO system.\n\nThe process took approximately 5 hours per competence month, and was prone to typing errors.",
@@ -280,8 +277,7 @@
         "tecnologiasUsadas.en": "Technologies: ",
         "tecnologias.en": "Python, TKinter",
         "conceito.en": "Concepts covered",
-        "detalheConceito.en": "Regular Expressions · TXT File Processing · Data Structures · Data Validation · Process Automation · Format Reverse Engineering",
-        "textoTecnologia.en": "| Exclusive use of the Department of Health"
+        "detalheConceito.en": "Regular Expressions · TXT File Processing · Data Structures · Data Validation · Process Automation · Format Reverse Engineering"
     },
     {
         "id": "telefonesemergenciabrasil",
@@ -339,7 +335,7 @@
     },
     {
         "id": "themeswitch",
-        "iconecard.en": "assets/pics-docs/previewThemeSwitch.gif",
+        "iconecard.en": "assets/pics-docs/previewThemeSwitch.webp",
         "titulocard.en": "ThemeSwitch",
         "descricaocard.en": "A sample of the functionality of changing the page's theme to dark or light, used, for example, in this page you're navigating, that can be implemented in any other web project.",
         "desafio.en": "Observed challenge",
@@ -402,7 +398,7 @@
         "ParagrafoSecaoProjetos1.es": "Aquí se encuentran proyectos y aplicaciones que desarrollé para practicar, experimentar con nuevas ideas y ampliar mi visibilidad en el campo.",
         "ParagrafoSecaoProjetos2.es": "Cada proyecto, por más tonto o pequeño que sea, es un registro de mi evolución y compromiso constante con el crecimiento profesional.",
         "TituloContato.es": "Hablemos:",
-        "ParagrafoContato.es": "Completa el formulario abajo o contáctame directamente por los canales al lado. ¡Respondo lo más rápido posible!",
+        "ParagrafoContato.es": "Completa el formulario abajo o contáctame directamente por los siguientes canales. ¡Respondo lo más rápido posible!",
         "LabelNome.es": "Su Nombre",
         "LabelEmail.es": "Tu Dirección de Correo Eletrónico",
         "LabelMensagem.es": "Tu Mensaje",
@@ -428,8 +424,8 @@
     },
     {
         "id": "agrogestor",
-        "iconecard.es": "assets/pics-docs/LogoAgroGestor.png",
-        "titulocard.es": "AgroGestor (En desarrollo)",
+        "iconecard.es": "assets/pics-docs/LogoAgroGestor.webp",
+        "titulocard.es": "AgroGestor | En desarrollo",
         "descricaocard.es": "Proyecto en desarrollo para participar en el Ânima Hub 2026/2, que consiste en una aplicación de gestión financiera dirigida al agricultor brasileño, como una forma de registrar y acompañar las transacciones (entrada y salida de capital) de su(s) granja(s).",
         "desafio.es": "Desafío",
         "detalheDesafio.es": "Los pequeños productores rurales pueden utilizar hojas de cálculo, notas o diferentes herramientas para realizar un seguimiento de información como granjas, cosechas, entradas, salidas y resultados financieros.\n\n El desafío fue transformar estas necesidades en una aplicación simple y organizada, capaz de centralizar esta información y permitir que el productor tenga una visión más clara de la situación de sus propiedades y cosechas.\n\nAdemás del desarrollo de funcionalidades, el proyecto también implicó desafíos técnicos como la autenticación de usuarios, el control de acceso a datos, la relación entre entidades y la construcción de una arquitectura que pudiera evolucionar junto con el MVP.",
@@ -440,14 +436,13 @@
         "tecnologiasUsadas.es": "Tecnologías: ",
         "tecnologias.es": "Flutter, Dart, Supabase, Git, GitHub",
         "conceito.es": "Conceptos abordados",
-        "detalheConceito.es": "CRUD • Base de Datos Relacional • Autenticación y Autorización • Row Level Security (RLS) • Backend as a Service (BaaS) • Desarrollo Cross-Platform • Modelado de datos • Arquitectura en capas",
-        "textoTecnologia.es": "| Proyecto privado (por ahora)"
+        "detalheConceito.es": "CRUD • Base de Datos Relacional • Autenticación y Autorización • Row Level Security (RLS) • Backend as a Service (BaaS) • Desarrollo Cross-Platform • Modelado de datos • Arquitectura en capas"
     },
     {
         "id": "geradorfpo",
         "iconecard.es": "assets/pics-docs/previewFPO.png",
         "previewProjeto.es": "assets/pics-docs/previewGeradorFPO.gif",
-        "titulocard.es": "Gerador FPO",
+        "titulocard.es": "Gerador FPO | Uso exclusivo de la Secretaría de Salud",
         "descricaocard.es": "Programa desarrollado durante mis prácticas en la Secretaría de Salud como una forma de automatizar / solucionar el proceso de digitación de la FPO (Ficha de Programación Presupuestaria) de cada centro de salud de mi municipio, cuya función es la de crear un archivo formateado según el diseño de importación para la FPO con cada cantidad realizada de cada procedimiento en cada centro.",
         "desafio.es": "Desafío observado",
         "detalheDesafio.es": "Durante mis prácticas en la Secretaría Municipal de Salud, identifiqué que la elaboración de la FPO requería un proceso manual y repetitivo: analizar informes de producción del BPA, importar los informes de cada centro individualmente a Excel, formatear cómo se importarían los datos (tabulación y delimitación), eliminar columnas innecesarias, hacer tablas dinámicas para sumar las cantidades de cada procedimiento y posteriormente digitarlas manualmente en el sistema FPO.\n\n El proceso tomaba aproximadamente 5 horas por competencia, además de estar sujeto a errores de digitación.",
@@ -458,8 +453,7 @@
         "tecnologiasUsadas.es": "Tecnologías: ",
         "tecnologias.es": "Python, TKinter",
         "conceito.es": "Conceptos abordados",
-        "detalheConceito.es": "Expresiones Regulares · Procesamiento de archivos TXT · Estructuras de datos · Validación de datos · Automatización de procesos · Ingeniería inversa de formatos",
-        "textoTecnologia.es": "| Uso exclusivo de la Secretaría de Salud"
+        "detalheConceito.es": "Expresiones Regulares · Procesamiento de archivos TXT · Estructuras de datos · Validación de datos · Automatización de procesos · Ingeniería inversa de formatos"
     },
     {
         "id": "telefonesemergenciabrasil",
@@ -517,7 +511,7 @@
     },
     {
         "id": "themeswitch",
-        "iconecard.es": "assets/pics-docs/previewThemeSwitch.gif",
+        "iconecard.es": "assets/pics-docs/previewThemeSwitch.webp",
         "titulocard.es": "ThemeSwitch",
         "descricaocard.es": "Una muestra de la funcionalidad de cambiar el tema de la página a claro u oscuro, utilizado por ejemplo en esta página que estás navegando, que puede ser implementada en otros proyectos web.",
         "desafio.es": "Desafío observado",
