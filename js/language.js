@@ -111,7 +111,7 @@ function renderizarProjetos(lang) {
         const div = document.createElement('div');
         div.classList.add('card');
         div.innerHTML = `
-            <img class="preview" src="${dado[`iconecard.${lang}`]}" alt="${dado[`titulocard.${lang}`]}">
+            <img class="preview" src="${dado[`iconecard.${lang}`]}" alt="${dado[`titulocard.${lang}`]} width="750" height="400">
             <h3 class="titulo-card">${dado[`titulocard.${lang}`]}</h3>
             <p>${dado[`descricaocard.${lang}`]}</p>
             <div class="tecnologias">
