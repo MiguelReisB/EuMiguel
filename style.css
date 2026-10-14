@@ -857,6 +857,7 @@ main {
 
 /* Página dos projetos */
 .VisaoProjetoContainer {
+    display: none;
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
