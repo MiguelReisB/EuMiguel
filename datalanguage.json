@@ -89,7 +89,7 @@
     {
         "id": "geradorfpo",
         "iconecard.pt": "assets/pics-docs/previewFPO.png",
-        "previewProjeto.pt": "assets/pics-docs/previewGeradorFPO.gif",
+        "previewProjeto.pt": "assets/pics-docs/previewGeradorFPO.webp",
         "titulocard.pt": "Gerador FPO | Uso exclusivo da Secretaria de Saúde",
         "descricaocard.pt": "Programa desenvolvido durante meu estágio na Secretaria de Saúde como uma forma de automatizar / solucionar o processo de digitação da FPO (Ficha de Programação Orçamentária) de cada estabelecimento de saúde do meu município, cuja função é a de criar um arquivo formatado de acordo com o layout de importação para a FPO com cada quantidade feita de cada procedimento em cada estabelecimento.",
         "desafio.pt": "Desafio observado",
@@ -265,7 +265,7 @@
     {
         "id": "geradorfpo",
         "iconecard.en": "assets/pics-docs/previewFPO.png",
-        "previewProjeto.en": "assets/pics-docs/previewGeradorFPO.gif",
+        "previewProjeto.en": "assets/pics-docs/previewGeradorFPO.webp",
         "titulocard.en": "Gerador FPO | Exclusive use of the Department of Health",
         "descricaocard.en": "A program I developed during my internship at the Department of Health to automate and streamline the process of manually filling out the FPOs (Budget Planning Forms) for each health facility in my city. The program’s function is to generate a document formatted in accordance with the FPO’s import layout, including the quantities for each procedure at each facility.",
         "desafio.en": "Observed challenge",
@@ -441,7 +441,7 @@
     {
         "id": "geradorfpo",
         "iconecard.es": "assets/pics-docs/previewFPO.png",
-        "previewProjeto.es": "assets/pics-docs/previewGeradorFPO.gif",
+        "previewProjeto.es": "assets/pics-docs/previewGeradorFPO.webp",
         "titulocard.es": "Gerador FPO | Uso exclusivo de la Secretaría de Salud",
         "descricaocard.es": "Programa desarrollado durante mis prácticas en la Secretaría de Salud como una forma de automatizar / solucionar el proceso de digitación de la FPO (Ficha de Programación Presupuestaria) de cada centro de salud de mi municipio, cuya función es la de crear un archivo formateado según el diseño de importación para la FPO con cada cantidad realizada de cada procedimiento en cada centro.",
         "desafio.es": "Desafío observado",
