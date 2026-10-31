@@ -761,7 +761,7 @@ main { background: var(--cor-fundo-main); padding-top: var(--header-height); }
     margin: 0;
     padding: 0;
 }
-.RodapeContatoBotoes .LinksRodape img { width: 48px; height: 48px; transition: all var(--transition); opacity: 0.6; }
+.RodapeContatoBotoes .LinksRodape img { width: 30px; height: 30px; transition: all var(--transition); opacity: 0.6; }
 .LinksRodape img:hover{ opacity: 1; }
 /* Voltar-ao-topo */
 #back-to-top {
