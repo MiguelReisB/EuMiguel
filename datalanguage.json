@@ -105,6 +105,23 @@
         "detalheConceito.pt": "Expressões Regulares · Processamento de arquivos TXT · Estruturas de dados · Validação de dados · Automação de processos · Engenharia reversa de formatos"
     },
     {
+        "id": "matrixraingen",
+        "iconecard.pt": "assets/pics-docs/previewMatrixRain.webp",
+        "titulocard.pt": "Matrix Rain Generator",
+        "descricaocard.pt": "Ferramenta desenvolvida para gerar animações personalizadas no estilo Matrix em formato WebP, com transparência e loop contínuo, permitindo estilizar READMEs do GitHub de maneira dinâmica e automatizada. Possui configurações personalizáveis de cores, dimensões, velocidade, caracteres e duração. Possui licença APACHE 2.0 para uso público e gratuito.",
+        "desafio.pt": "Desafio observado",
+        "detalheDesafio.pt": "A vontade de personalizar READMEs do GitHub com animações e efeitos visuais, especialmente o efeito de chuva de caracteres inspirado no filme Matrix, assim como a seção Hero do meu portfólio.\n\nEntretanto, o GitHub não permite a execução de JavaScript ou elementos dinâmicos como <canvas> diretamente nos arquivos README, impossibilitando a reprodução desse tipo de efeito em tempo real.",
+        "solucao.pt": "Solução encontrada",
+        "detalheSolucao.pt": "Foi criada uma ferramenta que combina JavaScript, HTML, CSS e Python para produzir animações independentes da execução de código no GitHub.\nO JavaScript desenha a animação em um elemento Canvas, enquanto o Python, utilizando Playwright, abre o navegador Chromium em modo Headless e captura os quadros individualmente. Por fim, a biblioteca Pillow reúne as imagens e gera um arquivo WebP animado, com transparência e repetição contínua.",
+        "resultado.pt": "Resultados",
+        "detalheResultado.pt": "Uma ferramenta funcional capaz de gerar animações WebP personalizadas, prontas para serem incorporadas a READMEs por meio de Markdown ou HTML.\n\nEntre os principais recursos implementados estão:\n▶ Personalização de cores, caracteres, dimensões e velocidade da animação.\n▶ Controle de duração e comportamento do loop.\n▶ Geração paralela de quadros para otimizar o processamento.\n▶ Transparência completa, permitindo adaptação a diferentes temas visuais.\n▶ Possibilidade de inserir textos e elementos adicionais sobre a animação com ferramentas externas.",
+        "tecnologiasUsadas.pt": "Tecnologias: ",
+        "tecnologias.pt": "HTML, CSS, JavaScript, Python, Git, GitHub",
+        "conceito.pt": "Conceitos abordados",
+        "detalheConceito.pt": "Automação de processos com Python · Manipulação e geração de imagens animadas · Integração entre Python e JavaScript · Renderização e captura automatizada com Playwright · Manipulação de Canvas e animações com JavaScript",
+        "link2.pt": "https://github.com/MiguelReisB/matrix-rain-gen"
+    },
+    {
         "id": "telefonesemergenciabrasil",
         "iconecard.pt": "assets/pics-docs/PreviewTelefonesEmergencia.png",
         "titulocard.pt": "Telefones de Emergência Brasil",
@@ -282,6 +299,23 @@
         "detalheConceito.en": "Regular Expressions · TXT File Processing · Data Structures · Data Validation · Process Automation · Format Reverse Engineering"
     },
     {
+        "id": "matrixraingen",
+        "iconecard.en": "assets/pics-docs/previewMatrixRain.webp",
+        "titulocard.en": "Matrix Rain Generator",
+        "descricaocard.en": "Tool developed to generate custom Matrix-style animations in WebP format, with transparency and continuous loop, allowing GitHub READMEs to be styled in a dynamic and automated way. It features customizable settings for colors, dimensions, speed, characters, and duration. Licensed under APACHE 2.0 for free and public use.",
+        "desafio.en": "Observed challenge",
+        "detalheDesafio.en": "The desire to customize GitHub READMEs with animations and visual effects, especially the rain of characters effect inspired by the movie The Matrix, just like the Hero section of my portfolio.\n\nHowever, GitHub does not allow the execution of JavaScript or dynamic elements such as <canvas> directly inside README files, making it impossible to reproduce this kind of effect in real time.",
+        "solucao.en": "Solution found",
+        "detalheSolucao.en": "A tool combining JavaScript, HTML, CSS and Python was created to produce animations independent of code execution on GitHub.\nJavaScript renders the animation onto a Canvas element, while Python, using Playwright, launches the Chromium browser in Headless mode and captures individual frames. Finally, the Pillow library compiles the images and generates an animated WebP file, with transparency and seamless looping.",
+        "resultado.en": "Results",
+        "detalheResultado.en": "A functional tool capable of generating custom WebP animations, ready to be embedded into READMEs via Markdown or HTML.\n\nAmong the main implemented features are:\n▶ Customization of colors, characters, dimensions, and animation speed.\n▶ Control over duration and loop behavior.\n▶ Parallel frame generation to optimize processing.\n▶ Full transparency, enabling adaptation to different visual themes.\n▶ Possibility to overlay text and additional elements onto the animation using external tools.",
+        "tecnologiasUsadas.en": "Technologies: ",
+        "tecnologias.en": "HTML, CSS, JavaScript, Python, Git, GitHub",
+        "conceito.en": "Concepts covered",
+        "detalheConceito.en": "Process automation with Python · Animated image manipulation and generation · Python and JavaScript integration · Automated rendering and capture with Playwright · Canvas manipulation and animations with JavaScript",
+        "link2.en": "https://github.com/MiguelReisB/matrix-rain-gen"
+    },
+    {
         "id": "telefonesemergenciabrasil",
         "iconecard.en": "assets/pics-docs/PreviewTelefonesEmergencia.png",
         "titulocard.en": "Brazil Emergency Numbers",
@@ -457,6 +491,23 @@
         "tecnologias.es": "Python, TKinter",
         "conceito.es": "Conceptos abordados",
         "detalheConceito.es": "Expresiones Regulares · Procesamiento de archivos TXT · Estructuras de datos · Validación de datos · Automatización de procesos · Ingeniería inversa de formatos"
+    },
+    {
+        "id": "matrixraingen",
+        "iconecard.es": "assets/pics-docs/previewMatrixRain.webp",
+        "titulocard.es": "Matrix Rain Generator",
+        "descricaocard.es": "Herramienta desarrollada para generar animaciones personalizadas al estilo Matrix en formato WebP, con transparencia y bucle continuo, permitiendo estilizar READMEs de GitHub de manera dinámica y automatizada. Cuenta con configuraciones personalizables de colores, dimensiones, velocidad, caracteres y duración. Posee licencia APACHE 2.0 para uso público y gratuito.",
+        "desafio.es": "Desafío observado",
+        "detalheDesafio.es": "El deseo de personalizar READMEs de GitHub con animaciones y efectos visuales, especialmente el efecto de lluvia de caracteres inspirado en la película Matrix, al igual que en la sección Hero de mi portafolio.\n\nSin embargo, GitHub no permite la ejecución de JavaScript ni de elementos dinámicos como <canvas> directamente en los archivos README, imposibilitando la reproducción de este tipo de efecto en tiempo real.",
+        "solucao.es": "Solución encontrada",
+        "detalheSolucao.es": "Se creó una herramienta que combina JavaScript, HTML, CSS y Python para producir animaciones independientes de la ejecución de código en GitHub.\nJavaScript dibuja la animación en un elemento Canvas, mientras que Python, utilizando Playwright, abre el navegador Chromium en modo Headless y captura los fotogramas individualmente. Por último, la biblioteca Pillow reúne las imágenes y genera un archivo WebP animado, con transparencia y repetición continua.",
+        "resultado.es": "Resultados",
+        "detalheResultado.es": "Una herramienta funcional capaz de generar animaciones WebP personalizadas, listas para ser incorporadas en READMEs mediante Markdown o HTML.\n\nEntre las principales funciones implementadas se encuentran:\n▶ Personalización de colores, caracteres, dimensiones y velocidad de la animación.\n▶ Control de duración y comportamiento del bucle.\n▶ Generación paralela de fotogramas para optimizar el procesamiento.\n▶ Transparencia completa, permitiendo la adaptación a diferentes temas visuales.\n▶ Posibilidad de insertar textos y elementos adicionales sobre la animación con herramientas externas.",
+        "tecnologiasUsadas.es": "Tecnologías: ",
+        "tecnologias.es": "HTML, CSS, JavaScript, Python, Git, GitHub",
+        "conceito.es": "Conceptos abordados",
+        "detalheConceito.es": "Automatización de procesos con Python · Manipulación y generación de imágenes animadas · Integración entre Python y JavaScript · Renderizado y captura automatizada con Playwright · Manipulación de Canvas y animaciones con JavaScript",
+        "link2.es": "https://github.com/MiguelReisB/matrix-rain-gen"
     },
     {
         "id": "telefonesemergenciabrasil",
